@@ -1,5 +1,5 @@
 // Contact information
-export const WHATSAPP_URL = "https://wa.me/5593991674540";
+export const WHATSAPP_URL = "https://api.whatsapp.com/send?1=pt_BR&phone=5593991674540";
 
 // Award information
 export const AWARDS = [
