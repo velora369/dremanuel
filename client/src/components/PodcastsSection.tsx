@@ -7,17 +7,17 @@ const PodcastsSection: React.FC = () => {
   const podcasts = [
     {
       title: 'MedTalks Ep. 11 Saúde Renal em Foco: Como Cuidar dos Seus Rins',
-      url: '#',
+      url: 'https://www.youtube.com/watch?v=vQZclujnIEI',
       icon: '🎧'
     },
     {
       title: 'MedTalks #05 Transplante – Panorama dos Pacientes Renais Crônicos e o Transplante Renal no Brasil',
-      url: '#',
+      url: 'https://www.youtube.com/watch?v=whK1u9IT7so',
       icon: '🎧'
     },
     {
       title: 'VoxCast #028 POCUS na prática médica — Dr. Emanuel Esposito & Luan Moraes',
-      url: '#',
+      url: 'https://www.youtube.com/watch?v=ZXRbcpKPYN4',
       icon: '🎧'
     }
   ];
@@ -81,7 +81,9 @@ const PodcastsSection: React.FC = () => {
         >
           {podcasts.map((podcast, index) => (
             <motion.a 
-              href={podcast.url} 
+              href={podcast.url}
+              target="_blank"
+              rel="noopener noreferrer" 
               key={index}
               className="bg-white rounded-xl p-6 shadow-sm flex flex-col items-center text-center card-hover h-full"
               variants={item}

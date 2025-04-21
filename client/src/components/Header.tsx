@@ -59,6 +59,12 @@ const Header: React.FC = () => {
           <button onClick={() => handleNavLinkClick('curso')} className="text-primary hover:text-secondary transition-colors">
             Curso POCUS
           </button>
+          <button onClick={() => handleNavLinkClick('na-midia')} className="text-primary hover:text-secondary transition-colors">
+            Entrevistas
+          </button>
+          <button onClick={() => handleNavLinkClick('podcasts')} className="text-primary hover:text-secondary transition-colors">
+            Podcasts
+          </button>
         </nav>
         
         <div className="flex">
@@ -87,6 +93,12 @@ const Header: React.FC = () => {
             </button>
             <button onClick={() => handleNavLinkClick('curso')} className="text-primary hover:text-secondary transition-colors py-2 text-left">
               Curso POCUS
+            </button>
+            <button onClick={() => handleNavLinkClick('na-midia')} className="text-primary hover:text-secondary transition-colors py-2 text-left">
+              Entrevistas
+            </button>
+            <button onClick={() => handleNavLinkClick('podcasts')} className="text-primary hover:text-secondary transition-colors py-2 text-left">
+              Podcasts
             </button>
           </nav>
         </div>

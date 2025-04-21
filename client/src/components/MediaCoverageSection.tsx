@@ -6,17 +6,17 @@ const MediaCoverageSection: React.FC = () => {
   const mediaItems = [
     {
       title: 'G1: Modelo de captação e transplante de rim é apresentado por médico do HRBA em congresso brasileiro',
-      url: '#',
+      url: 'https://g1.globo.com/pa/santarem-regiao/noticia/2021/10/22/modelo-de-captacao-e-transplante-de-rim-e-apresentado-por-medico-do-hrba-em-congresso-brasileiro.ghtml',
       icon: '📌'
     },
     {
       title: 'Globoplay: Conheça história de paciente que recebeu um rim e teve esperanças renovadas (saúde renal)',
-      url: '#',
+      url: 'https://globoplay.globo.com/v/13418593/',
       icon: '📌'
     },
     {
       title: 'Globoplay: 2ª corrida \'Doando Pela Vida\' é realizada em Santarém (Evento organizado pelo Dr. Emanuel Esposito)',
-      url: '#',
+      url: 'https://globoplay.globo.com/v/11936358/',
       icon: '📌'
     }
   ];
@@ -64,7 +64,9 @@ const MediaCoverageSection: React.FC = () => {
         >
           {mediaItems.map((media, index) => (
             <motion.a 
-              href={media.url} 
+              href={media.url}
+              target="_blank"
+              rel="noopener noreferrer"
               key={index}
               className="bg-[#F8F7F4] rounded-xl p-6 shadow-sm flex flex-col items-center text-center card-hover h-full"
               variants={item}
