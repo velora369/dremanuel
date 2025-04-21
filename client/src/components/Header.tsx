@@ -35,9 +35,12 @@ const Header: React.FC = () => {
     <header className={`fixed w-full bg-white/95 backdrop-blur-sm z-50 ${isScrolled ? 'shadow-sm' : ''}`}>
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex items-center">
-          <div className="text-primary font-montserrat">
-            <span className="font-bold text-xl">Dr. Emanuel Esposito</span>
-            <span className="hidden md:block text-xs text-secondary">Médico Nefrologista</span>
+          <div className="h-12">
+            <img 
+              src="/attached_assets/images/logo-emanuel-esposito.webp" 
+              alt="Logo Dr. Emanuel Esposito" 
+              className="h-full"
+            />
           </div>
         </div>
         
@@ -56,14 +59,9 @@ const Header: React.FC = () => {
           </button>
         </nav>
         
-        <div className="flex space-x-3">
-          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-            <Button variant="default" size="sm" className="btn-primary flex items-center">
-              <i className="fab fa-whatsapp mr-2"></i> Agendar
-            </Button>
-          </a>
+        <div className="flex">
           <button 
-            className="md:hidden text-primary" 
+            className="text-primary" 
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
           >

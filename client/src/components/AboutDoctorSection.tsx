@@ -7,7 +7,8 @@ const AboutDoctorSection: React.FC = () => {
   const stats = [
     { value: "120+", label: "Transplantes realizados" },
     { value: "20+", label: "Anos de experiência" },
-    { value: "5000+", label: "Pacientes atendidos" }
+    { value: "5000+", label: "Pacientes atendidos" },
+    { value: "150+", label: "Artigos publicados" }
   ];
 
   return (
@@ -22,7 +23,7 @@ const AboutDoctorSection: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <img 
-              src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80" 
+              src="/attached_assets/images/perfil.webp" 
               alt="Dr. Emanuel Esposito" 
               className="w-full h-auto rounded-2xl shadow-lg object-cover"
             />
