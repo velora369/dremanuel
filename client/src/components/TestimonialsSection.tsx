@@ -36,9 +36,19 @@ const TestimonialsSection: React.FC = () => {
               >
                 <div className="flex flex-col md:flex-row gap-6">
                   <div className="md:w-1/4 flex flex-col items-center">
-                    <div className="w-20 h-20 rounded-full bg-[#D8D2C0]/30 flex items-center justify-center text-primary text-2xl mb-2">
-                      <i className="fas fa-user"></i>
-                    </div>
+                    {testimonial.isGoogle ? (
+                      <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center mb-2 shadow-sm">
+                        <img 
+                          src="/attached_assets/images/google-avaliacao.webp" 
+                          alt="Google Avaliação" 
+                          className="w-16 h-16 object-contain"
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-20 h-20 rounded-full bg-[#D8D2C0]/30 flex items-center justify-center text-primary text-2xl mb-2">
+                        <i className="fas fa-user"></i>
+                      </div>
+                    )}
                     <div className="text-center">
                       <div className="text-secondary">
                         {[...Array(testimonial.rating)].map((_, i) => (

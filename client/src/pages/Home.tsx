@@ -11,6 +11,7 @@ import TechnologySection from '@/components/TechnologySection';
 import CourseSection from '@/components/CourseSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import FinalCTASection from '@/components/FinalCTASection';
+import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
 const Home: React.FC = () => {
@@ -33,6 +34,7 @@ const Home: React.FC = () => {
         <CourseSection />
         <TestimonialsSection />
         <FinalCTASection />
+        <ContactSection />
       </main>
       <Footer />
     </div>

@@ -1,5 +1,5 @@
 // Contact information
-export const WHATSAPP_URL = "https://wa.me/5500000000000";
+export const WHATSAPP_URL = "https://wa.me/5593991674540";
 
 // Award information
 export const AWARDS = [
@@ -109,9 +109,24 @@ export const COURSE_TOPICS = [
 export const TESTIMONIALS = [
   {
     quote: "O Dr. Emanuel me salvou da diálise. Atuação precisa, humana e com tecnologia que nunca vi em outro consultório.",
-    author: "Paciente com doença renal crônica",
-    type: "Atendimento online",
-    rating: 5
+    author: "Maria Silva",
+    type: "Avaliação Google",
+    rating: 5,
+    isGoogle: true
+  },
+  {
+    quote: "Médico extremamente profissional e atencioso. Encontrei no Dr. Emanuel o apoio necessário para tratar minha condição renal. Recomendo fortemente!",
+    author: "João Pereira",
+    type: "Avaliação Google",
+    rating: 5,
+    isGoogle: true
+  },
+  {
+    quote: "Atendimento humanizado e de alta qualidade. O Dr. Emanuel explica tudo com clareza e paciência. Finalmente entendi minha condição e como tratá-la.",
+    author: "Ana Carla Santos",
+    type: "Avaliação Google",
+    rating: 5,
+    isGoogle: true
   }
 ];
 

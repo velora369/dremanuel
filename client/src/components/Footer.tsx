@@ -7,7 +7,8 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0 text-center md:text-left">
             <div className="font-montserrat font-bold text-xl mb-1">Dr. Emanuel Esposito</div>
-            <p className="text-white/70 text-sm">Médico Nefrologista | CRM-PA 12345</p>
+            <p className="text-white/70 text-sm">Médico Nefrologista | CRM-PA: 9173</p>
+            <p className="text-white/70 text-sm">RQE CM: 8787 | RQE NEFRO: 8786</p>
           </div>
           
           <div className="flex flex-col items-center md:items-end">
