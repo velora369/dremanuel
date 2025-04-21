@@ -37,12 +37,13 @@ const TestimonialsSection: React.FC = () => {
                 <div className="flex flex-col md:flex-row gap-6">
                   <div className="md:w-1/4 flex flex-col items-center">
                     {testimonial.isGoogle ? (
-                      <div className="w-28 h-28 flex items-center justify-center mb-2">
-                        <img 
-                          src="/images/google-avaliacao.webp" 
-                          alt="Google Avaliação" 
-                          className="w-full h-full object-contain"
-                        />
+                      <div className="mb-2 text-center">
+                        <div className="text-lg font-medium text-primary mb-1">
+                          <i className="fab fa-google text-[#4285F4] mr-2"></i>Google
+                        </div>
+                        <p className="text-sm text-primary/70">
+                          Baseado em 46 avaliações verificadas no Google
+                        </p>
                       </div>
                     ) : (
                       <div className="w-20 h-20 rounded-full bg-[#D8D2C0]/30 flex items-center justify-center text-primary text-2xl mb-2">
