@@ -21,7 +21,7 @@ const FinalCTASection: React.FC = () => {
             Agendamentos online e presenciais com suporte especializado e tecnologia de ponta.
           </p>
           
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-10">
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               <Button variant="default" size="lg" className="btn-primary w-full sm:w-auto flex items-center justify-center">
                 <i className="fab fa-whatsapp mr-2 text-lg"></i> Agendar consulta
@@ -41,25 +41,6 @@ const FinalCTASection: React.FC = () => {
             >
               <i className="fas fa-graduation-cap mr-2"></i> Acessar curso online
             </Button>
-          </div>
-          
-          <div className="flex flex-wrap justify-center gap-6 text-primary/60 text-sm">
-            <a href="#" className="hover:text-secondary transition-colors">Política de Privacidade</a>
-            <a href="#" className="hover:text-secondary transition-colors">Termos de Uso</a>
-            <a href="#" className="hover:text-secondary transition-colors">Agendamentos e Cancelamentos</a>
-            <a 
-              href="#contato" 
-              onClick={(e) => {
-                e.preventDefault();
-                const contactElement = document.getElementById('contato');
-                if (contactElement) {
-                  contactElement.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-              className="hover:text-secondary transition-colors"
-            >
-              Contato
-            </a>
           </div>
         </motion.div>
       </div>
