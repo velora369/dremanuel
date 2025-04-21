@@ -38,6 +38,13 @@ const AboutDoctorSection: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
+            <div className="mb-6">
+              <img 
+                src="/images/voxcast-imagem.webp" 
+                alt="Dr. Emanuel Esposito no Voxcast" 
+                className="w-full max-w-md mx-auto h-auto rounded-lg shadow-md mb-4"
+              />
+            </div>
             <h2 className="text-3xl font-bold font-montserrat text-primary mb-2">Dr. Emanuel Esposito</h2>
             <p className="text-lg font-medium text-secondary mb-6">
               Médico Nefrologista | Diretor Clínico do HRBA | Professor da UEPA | Preceptor | Mestrando pela UFOPA

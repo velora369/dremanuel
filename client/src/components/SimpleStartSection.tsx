@@ -14,8 +14,8 @@ const SimpleStartSection: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <img 
-              src="/images/voxcast.jpg" 
-              alt="Dr. Emanuel Esposito no Voxcast" 
+              src="/images/perfil_1.webp" 
+              alt="Dr. Emanuel Esposito atendimento" 
               className="w-full h-auto object-cover rounded-xl shadow-lg"
             />
           </motion.div>
