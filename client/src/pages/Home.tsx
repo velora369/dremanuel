@@ -10,6 +10,8 @@ import SpecialtiesSection from '@/components/SpecialtiesSection';
 import TechnologySection from '@/components/TechnologySection';
 import CourseSection from '@/components/CourseSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
+import MediaCoverageSection from '@/components/MediaCoverageSection';
+import PodcastsSection from '@/components/PodcastsSection';
 import FinalCTASection from '@/components/FinalCTASection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
@@ -33,6 +35,8 @@ const Home: React.FC = () => {
         <TechnologySection />
         <CourseSection />
         <TestimonialsSection />
+        <MediaCoverageSection />
+        <PodcastsSection />
         <FinalCTASection />
         <ContactSection />
       </main>
