@@ -8,7 +8,9 @@ const AboutDoctorSection: React.FC = () => {
     { value: "120+", label: "Transplantes realizados" },
     { value: "20+", label: "Anos de experiência" },
     { value: "5000+", label: "Pacientes atendidos" },
-    { value: "150+", label: "Artigos publicados" }
+    { value: "150+", label: "Artigos publicados" },
+    { value: "25+", label: "Prêmios recebidos" },
+    { value: "10+", label: "Projetos de pesquisa" }
   ];
 
   return (
@@ -74,9 +76,11 @@ const AboutDoctorSection: React.FC = () => {
                 </Button>
               </a>
               
-              <Button variant="outline" className="border border-primary inline-block">
-                <i className="fas fa-graduation-cap mr-2"></i> Perfil acadêmico
-              </Button>
+              <a href="http://lattes.cnpq.br/4046885474500580" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" className="border border-primary inline-block">
+                  <i className="fas fa-graduation-cap mr-2"></i> Perfil acadêmico
+                </Button>
+              </a>
             </div>
           </motion.div>
         </div>
