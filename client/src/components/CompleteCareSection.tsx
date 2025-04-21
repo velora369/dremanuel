@@ -1,27 +1,32 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import pocusIcon from '../assets/icons/pocus-icon.webp';
 
 const CompleteCareSection: React.FC = () => {
   const services = [
     {
       icon: "fa-heartbeat",
       title: "MAPA",
-      description: "Monitoramento Ambulatorial da Pressão Arterial por 24h"
+      description: "Monitoramento Ambulatorial da Pressão Arterial por 24h",
+      useCustomIcon: false
     },
     {
-      icon: "fa-wave-square",
       title: "Ultrassonografia",
-      description: "POCUS durante a consulta para diagnóstico imediato"
+      description: "POCUS durante a consulta para diagnóstico imediato",
+      useCustomIcon: true,
+      customIcon: pocusIcon
     },
     {
       icon: "fa-user-nurse",
       title: "Enfermeira Especializada",
-      description: "Suporte no pré e pós-consulta para atendimento completo"
+      description: "Suporte no pré e pós-consulta para atendimento completo",
+      useCustomIcon: false
     },
     {
       icon: "fa-mobile-alt",
       title: "Suporte via WhatsApp",
-      description: "Acesso direto à equipe para dúvidas e acompanhamento"
+      description: "Acesso direto à equipe para dúvidas e acompanhamento",
+      useCustomIcon: false
     }
   ];
 
@@ -78,7 +83,11 @@ const CompleteCareSection: React.FC = () => {
               }}
             >
               <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center text-secondary text-2xl mb-4">
-                <i className={`fas ${service.icon}`}></i>
+                {service.useCustomIcon ? (
+                  <img src={service.customIcon} alt={service.title} className="w-8 h-8 object-contain" />
+                ) : (
+                  <i className={`fas ${service.icon}`}></i>
+                )}
               </div>
               <h3 className="font-montserrat font-semibold text-primary mb-2">{service.title}</h3>
               <p className="text-sm text-primary/70">{service.description}</p>
