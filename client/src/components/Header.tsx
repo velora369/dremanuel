@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { WHATSAPP_URL } from '@/lib/constants';
+// Importando o logo diretamente como um módulo
+import logoImage from '../assets/logo-emanuel-novo.png';
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -37,7 +39,7 @@ const Header: React.FC = () => {
         <div className="flex items-center">
           <div className="h-12 w-auto">
             <img 
-              src="/logo-emanuel-novo.png" 
+              src={logoImage} 
               alt="Logo Dr. Emanuel Esposito" 
               className="h-full w-auto object-contain"
             />
