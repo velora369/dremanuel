@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
           <div className="mb-6 md:mb-0 text-center md:text-left flex flex-col items-center md:items-start">
             <div className="h-16 w-auto mb-4">
               <img 
-                src="/images/logo-emanuel-esposito.webp" 
+                src="/images/logo-transp-novo.png" 
                 alt="Logo Dr. Emanuel Esposito" 
                 className="h-full w-auto object-contain brightness-[1.5]"
               />

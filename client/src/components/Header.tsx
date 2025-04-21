@@ -37,7 +37,7 @@ const Header: React.FC = () => {
         <div className="flex items-center">
           <div className="h-14 w-auto">
             <img 
-              src="/images/logo-emanuel-esposito.webp" 
+              src="/images/logo-transp-novo.png" 
               alt="Logo Dr. Emanuel Esposito" 
               className="h-full w-auto object-contain"
             />
