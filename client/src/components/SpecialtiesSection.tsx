@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SPECIALTIES } from '@/lib/constants';
-import kidneyIcon from '../assets/icons/kidney-icon.webp';
+import kidneyIcon from '../assets/icons/new-kidney-icon.webp';
 
 const SpecialtiesSection: React.FC = () => {
   const container = {
@@ -58,7 +58,7 @@ const SpecialtiesSection: React.FC = () => {
             >
               <div className="bg-secondary/20 p-3 rounded-full text-secondary text-xl mb-3">
                 {specialty.title === "Doença renal crônica" ? (
-                  <img src={kidneyIcon} alt="Doença renal crônica" className="w-10 h-10 object-contain" />
+                  <img src={kidneyIcon} alt="Doença renal crônica" className="w-8 h-8 object-contain" />
                 ) : (
                   <i className={`fas ${specialty.icon}`}></i>
                 )}
