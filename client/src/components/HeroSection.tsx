@@ -67,8 +67,6 @@ const HeroSection: React.FC = () => {
           </motion.div>
         </motion.div>
       </div>
-      
-      <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-[#F8F7F4] to-transparent"></div>
     </section>
   );
 };
