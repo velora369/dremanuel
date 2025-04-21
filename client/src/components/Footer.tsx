@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Footer: React.FC = () => {
   return (
@@ -8,7 +9,7 @@ const Footer: React.FC = () => {
           <div className="mb-6 md:mb-0 text-center md:text-left flex flex-col items-center md:items-start">
             <div className="h-16 w-auto mb-4">
               <img 
-                src="/images/logo-transp-novo.png" 
+                src="/images/logo-emanuel-novo.png" 
                 alt="Logo Dr. Emanuel Esposito" 
                 className="h-full w-auto object-contain brightness-[1.5]"
               />
@@ -19,13 +20,46 @@ const Footer: React.FC = () => {
           </div>
           
           <div className="flex flex-col items-center md:items-end">
-            <div className="flex space-x-4 mb-3">
-              <a href="https://www.instagram.com/nefro.esposito?igsh=MTlpbDM5ZGc3aXJzZg==" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#D8D2C0] transition-colors">
-                <i className="fab fa-instagram text-xl"></i>
-              </a>
-              <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5593991674540" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#D8D2C0] transition-colors">
-                <i className="fab fa-whatsapp text-xl"></i>
-              </a>
+            <div className="flex space-x-6 mb-4">
+              <motion.a 
+                href="https://www.instagram.com/nefro.esposito?igsh=MTlpbDM5ZGc3aXJzZg==" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-white hover:text-[#D8D2C0] transition-colors p-3 rounded-full bg-secondary/20 backdrop-blur-sm shadow-lg"
+                initial={{ y: 0 }}
+                animate={{ 
+                  y: [0, -6, 0],
+                  rotateZ: [0, 5, -5, 0],
+                  scale: [1, 1.1, 1]
+                }}
+                transition={{ 
+                  repeat: Infinity, 
+                  duration: 3,
+                  ease: "easeInOut"
+                }}
+              >
+                <i className="fab fa-instagram text-2xl"></i>
+              </motion.a>
+              <motion.a 
+                href="https://api.whatsapp.com/send?1=pt_BR&phone=5593991674540" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-white hover:text-[#D8D2C0] transition-colors p-3 rounded-full bg-secondary/20 backdrop-blur-sm shadow-lg"
+                initial={{ y: 0 }}
+                animate={{ 
+                  y: [0, -6, 0],
+                  rotateZ: [0, -5, 5, 0],
+                  scale: [1, 1.1, 1]
+                }}
+                transition={{ 
+                  repeat: Infinity, 
+                  duration: 3,
+                  ease: "easeInOut",
+                  delay: 0.5 
+                }}
+              >
+                <i className="fab fa-whatsapp text-2xl"></i>
+              </motion.a>
             </div>
             <p className="text-white/70 text-sm">© {new Date().getFullYear()} Dr. Emanuel Esposito. Todos os direitos reservados.</p>
           </div>

@@ -47,7 +47,19 @@ const FinalCTASection: React.FC = () => {
             <a href="#" className="hover:text-secondary transition-colors">Política de Privacidade</a>
             <a href="#" className="hover:text-secondary transition-colors">Termos de Uso</a>
             <a href="#" className="hover:text-secondary transition-colors">Agendamentos e Cancelamentos</a>
-            <a href="#" className="hover:text-secondary transition-colors">Contato</a>
+            <a 
+              href="#contato" 
+              onClick={(e) => {
+                e.preventDefault();
+                const contactElement = document.getElementById('contato');
+                if (contactElement) {
+                  contactElement.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="hover:text-secondary transition-colors"
+            >
+              Contato
+            </a>
           </div>
         </motion.div>
       </div>

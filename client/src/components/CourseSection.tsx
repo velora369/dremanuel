@@ -34,11 +34,13 @@ const CourseSection: React.FC = () => {
                   ))}
                 </div>
                 
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScBB7A20kLP1zRyIXh8f7kTDrPR47B5G11Maf4_fx9nW_efHg/viewform?pli=1" target="_blank" rel="noopener noreferrer">
-                  <Button variant="white" size="lg" className="btn-secondary inline-block">
-                    Lista de espera 2º Integra POCUS
-                  </Button>
-                </a>
+                <div className="flex justify-center mb-6">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLScBB7A20kLP1zRyIXh8f7kTDrPR47B5G11Maf4_fx9nW_efHg/viewform?pli=1" target="_blank" rel="noopener noreferrer">
+                    <Button variant="white" size="lg" className="btn-secondary">
+                      Lista de espera 2º Integra POCUS
+                    </Button>
+                  </a>
+                </div>
               </div>
               
               <div className="lg:w-2/5">
