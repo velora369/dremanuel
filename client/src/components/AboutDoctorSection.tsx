@@ -30,7 +30,7 @@ const AboutDoctorSection: React.FC = () => {
             </p>
             
             <p className="text-lg text-primary/80 mb-6">
-              Dr. Emanuel atua desde 2002, com foco em nefrologia, transplantes e inovação médica. Especialista em Clínica Médica pelo Hospital da Piedade SUS/RJ e Nefrologia na Universidade do Estado do Rio de Janeiro (UERJ). Coordena o serviço de nefrologia do HRBA, transformando a realidade da saúde renal na região amazônica. É professor efetivo da graduação e preceptor da residência médica da UEPA. Atua também como pesquisador e mestrando em Inovação Terapêutica pela UFOPA.
+              O Dr. Emanuel atua desde 2002, com foco em nefrologia, transplantes e inovação médica. Especialista em Clínica Médica pelo Hospital da Piedade SUS/RJ e Nefrologia na Universidade do Estado do Rio de Janeiro (UERJ). Coordena o serviço de nefrologia do HRBA, transformando a realidade da saúde renal na região amazônica. É professor efetivo da graduação e preceptor da residência médica da UEPA. Atua também como pesquisador e mestrando em Inovação Terapêutica pela UFOPA.
             </p>
             
             <motion.div 

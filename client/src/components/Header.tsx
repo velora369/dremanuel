@@ -81,7 +81,7 @@ const Header: React.FC = () => {
       </div>
       
       {/* Mobile menu */}
-      <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:hidden bg-white border-t border-gray-100`}>
+      <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} bg-white border-t border-gray-100`}>
         <div className="container mx-auto px-4 py-3">
           <nav className="flex flex-col space-y-3 font-montserrat text-sm">
             <button onClick={() => handleNavLinkClick('sobre')} className="text-primary hover:text-secondary transition-colors py-2 text-left">
