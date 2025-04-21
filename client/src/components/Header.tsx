@@ -35,12 +35,8 @@ const Header: React.FC = () => {
     <header className={`fixed w-full bg-white/95 backdrop-blur-sm z-50 ${isScrolled ? 'shadow-sm' : ''}`}>
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         <div className="flex items-center">
-          <div className="h-10 w-auto">
-            <img 
-              src="/images/logo-emanuel-atualizado.webp" 
-              alt="Logo Dr. Emanuel Esposito" 
-              className="h-full w-auto object-contain"
-            />
+          <div className="font-montserrat font-bold text-primary">
+            Dr. Emanuel Esposito
           </div>
         </div>
         
