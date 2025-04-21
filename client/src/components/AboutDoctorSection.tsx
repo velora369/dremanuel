@@ -40,7 +40,7 @@ const AboutDoctorSection: React.FC = () => {
           >
             <div className="mb-6">
               <img 
-                src="/images/voxcast-imagem.webp" 
+                src="/images/new/voxcast-podcast.jpg" 
                 alt="Dr. Emanuel Esposito no Voxcast" 
                 className="w-full max-w-md mx-auto h-auto rounded-lg shadow-md mb-4"
               />

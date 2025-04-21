@@ -14,7 +14,7 @@ const SimpleStartSection: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <img 
-              src="/images/perfil_1.webp" 
+              src="/images/new/perfil-doctor.jpeg" 
               alt="Dr. Emanuel Esposito atendimento" 
               className="w-full h-auto object-cover rounded-xl shadow-lg"
             />

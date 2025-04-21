@@ -37,7 +37,7 @@ const Header: React.FC = () => {
         <div className="flex items-center">
           <div className="h-12">
             <img 
-              src="/images/fundo-transp.webp" 
+              src="/images/new/logo-transp.jpeg" 
               alt="Logo Dr. Emanuel Esposito" 
               className="h-full"
             />
