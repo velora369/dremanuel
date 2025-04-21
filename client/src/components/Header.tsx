@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { WHATSAPP_URL } from '@/lib/constants';
+// Try to import the logo as a module
+import logoPath from '../../assets/logo-emanuel-atualizado.webp';
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -40,6 +42,12 @@ const Header: React.FC = () => {
               src="/images/logo-emanuel-atualizado.webp" 
               alt="Logo Dr. Emanuel Esposito" 
               className="h-full w-auto object-contain"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                console.error("Falha ao carregar a imagem:", target.src);
+                // Tente usar um caminho relativo como alternativa
+                target.src = "images/logo-emanuel-atualizado.webp";
+              }}
             />
           </div>
         </div>
