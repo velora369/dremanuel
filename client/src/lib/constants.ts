@@ -79,6 +79,11 @@ export const SPECIALTIES = [
     icon: "fa-syringe",
     title: "Doença renal por diabetes",
     description: "Cuidado especializado da nefropatia diabética"
+  },
+  {
+    icon: "fa-circle-nodes",
+    title: "Cistos renais",
+    description: "Diagnóstico, acompanhamento e tratamento de cistos renais"
   }
 ];
 

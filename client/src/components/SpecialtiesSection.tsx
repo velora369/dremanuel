@@ -47,7 +47,7 @@ const SpecialtiesSection: React.FC = () => {
           {SPECIALTIES.map((specialty, index) => (
             <motion.div 
               key={index}
-              className="bg-white rounded-xl p-6 shadow-sm flex items-start card-hover"
+              className="bg-white rounded-xl p-6 shadow-sm flex flex-col items-center text-center card-hover"
               variants={item}
               whileHover={{ 
                 y: -5, 
@@ -55,7 +55,7 @@ const SpecialtiesSection: React.FC = () => {
                 transition: { duration: 0.3 } 
               }}
             >
-              <div className="bg-secondary/20 p-3 rounded-full text-secondary text-xl mr-4">
+              <div className="bg-secondary/20 p-3 rounded-full text-secondary text-xl mb-3">
                 <i className={`fas ${specialty.icon}`}></i>
               </div>
               <div>

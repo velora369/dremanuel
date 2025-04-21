@@ -18,7 +18,7 @@ const SimpleStartSection: React.FC = () => {
             </h2>
             
             <p className="text-lg text-primary/80 mb-8">
-              Na clínica do Dr. Emanuel, o primeiro contato é com uma enfermeira nefrologista especializada. Ela realiza uma anamnese pré-consulta, faz os primeiros esclarecimentos e segue disponível via WhatsApp no pós-consulta. A consulta com o Dr. é a segunda fase de um atendimento completo, seguro e humano.
+              Na clínica do Dr. Emanuel Esposito, o seu primeiro contato será com uma enfermeira especialista em nefrologia. A mesma realiza uma anamnese pré-consulta, no dia do seu atendimento, faz os primeiros esclarecimentos e segue disponível via WhatsApp no pós-consulta. A consulta com o Dr. Emanuel é a fase seguinte de um atendimento completo, seguro e resolutivo.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
