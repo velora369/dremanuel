@@ -1,0 +1,82 @@
+Crie uma landing page impactante para o Dr. Emanuel Esposito, com o objetivo de:
+* Divulgar seus feitos, atendimentos, procedimentos e cursos.
+* Aumentar o volume de agendamentos via WhatsApp.
+* Captar leads para seu curso de POCUS.
+* Transmitir autoridade, cuidado e transparência na área de nefrologia.
+O visual deve ser moderno, limpo e futurista, com design suave e foco em uma experiência fluida no celular (mobile-first). A página deve ser totalmente responsiva, com destaque para microinterações UX/UI — especialmente efeitos de destaque quando o usuário passa o dedo (scroll/hover) sobre os cards.
+1. HERO SECTION
+Título: Transformando a medicina renal no Baixo Amazonas.
+Subtítulo: Dr. Emanuel Esposito — Médico nefrologista premiado, com mais de 120 transplantes renais realizados, atendimento completo e tecnologia de ponta. Presencial ou por telemedicina.
+Botões CTA:
+* Agendar consulta (WhatsApp)
+* Acessar curso de POCUS
+
+2. SESSÃO “EXPERIÊNCIA E LEGADO” 
+Título: Reconhecimento de uma trajetória que salva vidas.
+Texto: Ao longo de sua carreira, Dr. Emanuel Esposito recebeu diversos prêmios, honrarias e homenagens que refletem não só sua competência, mas seu impacto na vida de milhares de pacientes e no desenvolvimento da medicina no norte do país.
+Destaques em bullet points com ícones de medalha:
+* 🏅 Cidadão Santareno – Câmara Municipal de Santarém (2021)
+* 🎓 Professor Homenageado – UEPA – Turma 2013.2 (2019)
+* 🫀 Medalha da Solidariedade – ALEPA, Doador de Órgãos (2019)
+* 🥇 Menção Honrosa - 1º Lugar – II Salão Científico de Medicina – UEPA (2018)
+* 🥉 Menção Honrosa - 3º Lugar – II Salão Científico de Medicina – UEPA (2018)
+* 🧬 Moção de Louvor – Primeiro Transplante de Rim no HRBA (2016)
+* 🧾 Certificação Profissional – AMB + SBN (2012)
+* 📜 Título de Especialista em Nefrologia – SBN (2006)
+
+3. SESSÃO “SIMPLES DESDE O COMEÇO”
+Título: O cuidado começa antes da consulta.
+Texto: Na clínica do Dr. Emanuel, o primeiro contato é com uma enfermeira nefrologista especializada. Ela realiza uma anamnese pré-consulta, faz os primeiros esclarecimentos e segue disponível via WhatsApp no pós-consulta. A consulta com o Dr. é a segunda fase de um atendimento completo, seguro e humano.
+
+4. SESSÃO “ONLINE E PRESENCIAL”
+Título: Atendimentos onde você estiver.
+Texto: Com tecnologia de ponta e acolhimento profissional, você pode realizar sua consulta presencial em Santarém-PA ou de qualquer lugar do Brasil via telemedicina.
+Botão: Agendar via WhatsApp
+
+5. SESSÃO “ATENDIMENTO COMPLETO”
+Título: Diagnóstico, tecnologia e suporte completo num só lugar.
+Texto: Aqui você encontra muito mais do que uma consulta:
+* MAPA (Monitoramento Ambulatorial da Pressão Arterial 24h)
+* Ultrassonografia clínica (POCUS) durante a consulta
+* Enfermeira especializada no pré e pós-consulta
+* Suporte direto via WhatsApp com a equipe
+
+6. SESSÃO “SOBRE O DR. EMANUEL ESPOSITO”
+Título: Dr. Emanuel Esposito
+Subtítulo: Médico Nefrologista | Diretor Clínico do HRBA | Professor da UEPA | Preceptor | Mestrando pela UFOPA
+Texto: Nascido em Cuiabá/MT, Dr. Emanuel atua desde 2002, com foco em nefrologia, transplantes e inovação médica. Coordena o serviço de nefrologia do HRBA, transformando a realidade da saúde renal na região amazônica. É professor efetivo da graduação e preceptor da residência médica da UEPA. Atua também como pesquisador e mestrando em Inovação Terapêutica pela UFOPA.
+
+7. SESSÃO “ESPECIALIDADES & CONDIÇÕES ATENDIDAS”
+Título: Principais condições atendidas em consultório:
+Ícones em lista:
+* Doença renal crônica
+* Litíase renal (pedras nos rins)
+* Hipertensão arterial
+* Infecção urinária
+* Nefrites
+* Doença renal por diabetes
+
+8. SESSÃO “TECNOLOGIA QUE SALVA”
+Título: Tecnologia a serviço da sua saúde renal.
+Texto: Através da ultrassonografia POCUS, exames como MAPA e equipamentos modernos, o diagnóstico e acompanhamento são muito mais precisos. Com isso, evitam-se complicações graves, internações e avanço de doenças.
+
+9. SESSÃO “CURSO ONLINE - POCUS”
+Título: Curso Online: POCUS aplicado à clínica médica
+Texto: Junto com o Dr. Geraldo Pio Neto, Dr. Emanuel oferece um curso completo sobre ultrassonografia clínica, voltado para profissionais da saúde. ✅ Acesso por 1 ano ✅ Videoaulas gravadas ✅ Certificado incluso ✅ Ensino direto com quem aplica na prática
+Botão CTA: Quero fazer o curso
+
+10. SESSÃO “DEPOIMENTOS”
+Título: Histórias que provam a diferença.
+“O Dr. Emanuel me salvou da diálise. Atuação precisa, humana e com tecnologia que nunca vi em outro consultório.” – Paciente em atendimento online
+
+11. SESSÃO FINAL (FOOTER / AGENDAMENTO)
+Título: Pronto para cuidar dos seus rins com quem mais entende do assunto?
+Subtítulo: Agendamentos online e presenciais com suporte especializado e tecnologia de ponta.
+Botões CTA:
+* Agendar consulta (WhatsApp)
+* Acessar curso online (Checkout)
+Rodapé: Links institucionais | Direitos autorais | Política de privacidade 
+
+Cores responsivas do site: Verde Escuro Médico #23362B
+Verde Água Suave #7BAF96
+Areia/Bege Claro #D8D2C0
