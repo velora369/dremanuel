@@ -45,7 +45,7 @@ const CourseSection: React.FC = () => {
               
               <div className="lg:w-2/5">
                 <img 
-                  src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80" 
+                  src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/04/pocus-curso-.webp" 
                   alt="Curso POCUS aplicado à clínica médica" 
                   className="w-full h-auto rounded-xl"
                 />

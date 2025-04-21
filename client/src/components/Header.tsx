@@ -35,13 +35,14 @@ const Header: React.FC = () => {
 
   return (
     <header className={`fixed w-full bg-white/95 backdrop-blur-sm z-50 ${isScrolled ? 'shadow-sm' : ''}`}>
-      <div className="container mx-auto px-4 py-2 flex justify-between items-center">
+      <div className="container mx-auto px-4 py-1 flex justify-between items-center">
         <div className="flex items-center">
-          <div className="h-20 w-auto">
+          <div className="h-10 w-auto">
             <img 
               src={logoImage} 
               alt="Logo Dr. Emanuel Esposito" 
               className="h-full w-auto object-contain"
+              style={{ transform: 'scale(1.3)' }}
             />
           </div>
         </div>

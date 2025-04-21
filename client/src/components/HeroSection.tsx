@@ -7,7 +7,13 @@ const HeroSection: React.FC = () => {
   return (
     <section className="pt-24 md:pt-32 relative">
       <div 
-        className="absolute inset-0 bg-primary/90"
+        className="absolute inset-0 bg-primary/90 bg-blend-overlay"
+        style={{ 
+          backgroundImage: "url('https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/04/ponta-do-cururu-em-alter-do-chao.webp')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          opacity: 0.8
+        }}
       />
       
       <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
