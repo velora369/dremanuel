@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 42 30% 97%;
+    --foreground: 145 20% 18%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 145 20% 18%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 145 20% 18%;
+    
+    --primary: 145 20% 18%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 145 20% 59%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 0 0% 92%;
+    --muted-foreground: 145 20% 35%;
+    
+    --accent: 37 30% 80%;
+    --accent-foreground: 145 20% 18%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 145 20% 88%;
+    --input: 145 20% 88%;
+    --ring: 145 20% 18%;
+    
+    --radius: 0.5rem;
+
+    /* Chart colors */
+    --chart-1: 145 20% 18%;
+    --chart-2: 145 20% 59%;
+    --chart-3: 37 30% 80%;
+    --chart-4: 145 10% 40%;
+    --chart-5: 145 10% 70%;
+  }
+ 
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    background: linear-gradient(135deg, rgba(35, 54, 43, 0.9) 0%, rgba(35, 54, 43, 0.8) 100%);
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  .card-hover:hover {
+    @apply transform -translate-y-1 shadow-lg;
+  }
+  
+  .award-badge {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  .award-badge:hover {
+    @apply transform scale-105;
+  }
+  
+  .btn-primary {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  .btn-primary:hover {
+    @apply transform -translate-y-0.5 shadow-md;
+  }
+  
+  .btn-secondary {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  .btn-secondary:hover {
+    @apply transform -translate-y-0.5 shadow-md;
+  }
+}
