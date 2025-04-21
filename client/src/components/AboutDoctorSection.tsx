@@ -16,25 +16,11 @@ const AboutDoctorSection: React.FC = () => {
   return (
     <section id="sobre" className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center gap-10">
+        <div className="flex flex-col items-center">
           <motion.div 
-            className="lg:w-2/5"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <img 
-              src="/images/perfil.webp" 
-              alt="Dr. Emanuel Esposito" 
-              className="w-full h-auto rounded-2xl shadow-lg object-cover"
-            />
-          </motion.div>
-          
-          <motion.div 
-            className="lg:w-3/5"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className="max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >

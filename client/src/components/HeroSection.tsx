@@ -7,10 +7,7 @@ const HeroSection: React.FC = () => {
   return (
     <section className="pt-24 md:pt-32 relative">
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat hero-gradient"
-        style={{ 
-          backgroundImage: `url('/images/hospital.jpeg')` 
-        }}
+        className="absolute inset-0 bg-primary/90"
       />
       
       <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
@@ -21,7 +18,7 @@ const HeroSection: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <motion.h1 
-            className="text-3xl md:text-5xl font-bold text-white font-montserrat leading-tight mb-4"
+            className="text-3xl md:text-5xl font-bold text-white font-montserrat leading-tight mb-4 drop-shadow-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -30,7 +27,7 @@ const HeroSection: React.FC = () => {
           </motion.h1>
           
           <motion.p 
-            className="text-lg md:text-xl text-white/90 mb-8 font-inter"
+            className="text-lg md:text-xl text-white mb-8 font-inter drop-shadow-md"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
