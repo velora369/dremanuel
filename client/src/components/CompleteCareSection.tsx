@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import pocusIcon from '../assets/icons/pocus-icon.svg';
+import pocusIcon from '../assets/icons/new-pocus-icon.webp';
 
 const CompleteCareSection: React.FC = () => {
   const services = [
@@ -84,7 +84,7 @@ const CompleteCareSection: React.FC = () => {
             >
               <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center text-secondary text-2xl mb-4">
                 {service.useCustomIcon ? (
-                  <img src={service.customIcon} alt={service.title} className="w-8 h-8 object-contain" />
+                  <img src={service.customIcon} alt={service.title} className="w-12 h-12 object-contain" />
                 ) : (
                   <i className={`fas ${service.icon}`}></i>
                 )}
