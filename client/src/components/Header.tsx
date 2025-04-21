@@ -37,17 +37,18 @@ const Header: React.FC = () => {
     <header className={`fixed w-full bg-white/95 backdrop-blur-sm z-50 ${isScrolled ? 'shadow-sm' : ''}`}>
       <div className="container mx-auto px-4 py-1 flex justify-between items-center">
         <div className="flex items-center">
-          <div className="h-10 w-auto">
+          <div className="h-14 w-auto">
             <img 
               src={logoImage} 
               alt="Logo Dr. Emanuel Esposito" 
               className="h-full w-auto object-contain"
-              style={{ transform: 'scale(1.3)' }}
+              style={{ transform: 'scale(1.8)' }}
             />
           </div>
         </div>
         
-        <nav className="hidden md:flex space-x-6 font-montserrat text-sm">
+        {/* Desktop menu hidden - only shown on mobile when menu is open */}
+        <nav className="hidden">
           <button onClick={() => handleNavLinkClick('sobre')} className="text-primary hover:text-secondary transition-colors">
             Sobre
           </button>
@@ -70,11 +71,11 @@ const Header: React.FC = () => {
         
         <div className="flex">
           <button 
-            className="text-primary" 
+            className="text-primary text-2xl" 
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
           >
-            <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'} text-xl`}></i>
+            <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
           </button>
         </div>
       </div>

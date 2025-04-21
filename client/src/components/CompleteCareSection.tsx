@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import pocusIcon from '../assets/icons/pocus-icon.webp';
+import pocusIcon from '../assets/icons/pocus-icon.svg';
 
 const CompleteCareSection: React.FC = () => {
   const services = [
