@@ -41,7 +41,9 @@ const ContactSection: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-primary">Telefone</h4>
-                    <p className="text-primary/70">(93) 99167-4540</p>
+                    <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5593991674540" target="_blank" rel="noopener noreferrer" className="text-primary/70 hover:text-secondary transition-colors">
+                      (93) 99167-4540
+                    </a>
                   </div>
                 </div>
                 
@@ -61,11 +63,11 @@ const ContactSection: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-primary">Endereço</h4>
-                    <p className="text-primary/70">
+                    <a href="https://g.co/kgs/5yhFLSs" target="_blank" rel="noopener noreferrer" className="text-primary/70 hover:text-secondary transition-colors">
                       Clinica Integrativa Med Odonto. Sala 05.<br />
                       Rua Rosa Vermelha, número 763.<br />
                       Bairro Aeroporto Velho.
-                    </p>
+                    </a>
                   </div>
                 </div>
               </div>
