@@ -47,7 +47,7 @@ const SpecialtiesSection: React.FC = () => {
           {SPECIALTIES.map((specialty, index) => (
             <motion.div 
               key={index}
-              className="bg-white rounded-xl p-6 shadow-sm flex flex-col items-center text-center card-hover"
+              className={`bg-white rounded-xl p-6 shadow-sm flex flex-col items-center text-center card-hover ${index === SPECIALTIES.length - 1 ? 'lg:col-start-2' : ''}`}
               variants={item}
               whileHover={{ 
                 y: -5, 
