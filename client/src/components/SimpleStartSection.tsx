@@ -5,25 +5,11 @@ const SimpleStartSection: React.FC = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
+        <div className="flex flex-col items-center">
           <motion.div 
-            className="lg:w-1/2"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <img 
-              src="/images/new/perfil-doctor.jpeg" 
-              alt="Dr. Emanuel Esposito atendimento" 
-              className="w-full h-auto object-cover rounded-xl shadow-lg"
-            />
-          </motion.div>
-          
-          <motion.div 
-            className="lg:w-1/2"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className="max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >

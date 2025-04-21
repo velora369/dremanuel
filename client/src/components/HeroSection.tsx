@@ -9,7 +9,7 @@ const HeroSection: React.FC = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat hero-gradient"
         style={{ 
-          backgroundImage: `url('/images/hospital.svg')` 
+          backgroundImage: `url('/images/hospital.jpeg')` 
         }}
       />
       

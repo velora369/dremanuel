@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="overlay" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#143A56;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#143A56;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#E8F1F5" />
+  
+  <!-- Hospital Building -->
+  <rect x="250" y="200" width="700" height="450" fill="#FFFFFF" stroke="#DDDDDD" stroke-width="2"/>
+  
+  <!-- Windows -->
+  <g>
+    <!-- Left wing windows -->
+    <rect x="300" y="250" width="50" height="70" fill="#A1D6E2" stroke="#DDDDDD" stroke-width="1"/>
+    <rect x="370" y="250" width="50" height="70" fill="#A1D6E2" stroke="#DDDDDD" stroke-width="1"/>
+    <rect x="440" y="250" width="50" height="70" fill="#A1D6E2" stroke="#DDDDDD" stroke-width="1"/>
+    
+    <rect x="300" y="350" width="50" height="70" fill="#A1D6E2" stroke="#DDDDDD" stroke-width="1"/>
+    <rect x="370" y="350" width="50" height="70" fill="#A1D6E2" stroke="#DDDDDD" stroke-width="1"/>
+    <rect x="440" y="350" width="50" height="70" fill="#A1D6E2" stroke="#DDDDDD" stroke-width="1"/>
+    
+    <rect x="300" y="450" width="50" height="70" fill="#A1D6E2" stroke="#DDDDDD" stroke-width="1"/>
+    <rect x="370" y="450" width="50" height="70" fill="#A1D6E2" stroke="#DDDDDD" stroke-width="1"/>
+    <rect x="440" y="450" width="50" height="70" fill="#A1D6E2" stroke="#DDDDDD" stroke-width="1"/>
+    
+    <!-- Right wing windows -->
+    <rect x="710" y="250" width="50" height="70" fill="#A1D6E2" stroke="#DDDDDD" stroke-width="1"/>
+    <rect x="780" y="250" width="50" height="70" fill="#A1D6E2" stroke="#DDDDDD" stroke-width="1"/>
+    <rect x="850" y="250" width="50" height="70" fill="#A1D6E2" stroke="#DDDDDD" stroke-width="1"/>
+    
+    <rect x="710" y="350" width="50" height="70" fill="#A1D6E2" stroke="#DDDDDD" stroke-width="1"/>
+    <rect x="780" y="350" width="50" height="70" fill="#A1D6E2" stroke="#DDDDDD" stroke-width="1"/>
+    <rect x="850" y="350" width="50" height="70" fill="#A1D6E2" stroke="#DDDDDD" stroke-width="1"/>
+    
+    <rect x="710" y="450" width="50" height="70" fill="#A1D6E2" stroke="#DDDDDD" stroke-width="1"/>
+    <rect x="780" y="450" width="50" height="70" fill="#A1D6E2" stroke="#DDDDDD" stroke-width="1"/>
+    <rect x="850" y="450" width="50" height="70" fill="#A1D6E2" stroke="#DDDDDD" stroke-width="1"/>
+  </g>
+  
+  <!-- Center entrance -->
+  <rect x="525" y="500" width="150" height="150" fill="#FFFFFF" stroke="#DDDDDD" stroke-width="2"/>
+  <rect x="565" y="550" width="70" height="100" fill="#1995AD" stroke="#DDDDDD" stroke-width="1"/>
+  
+  <!-- Roof -->
+  <rect x="240" y="190" width="720" height="20" fill="#1995AD" stroke="#DDDDDD" stroke-width="1"/>
+  
+  <!-- Hospital Sign -->
+  <rect x="525" y="150" width="150" height="40" fill="#1995AD" stroke="#DDDDDD" stroke-width="1"/>
+  <text x="600" y="178" text-anchor="middle" font-family="Arial" font-size="24" fill="white">HOSPITAL</text>
+  
+  <!-- Red cross symbol -->
+  <rect x="585" y="210" width="30" height="80" fill="#E53935" rx="5" ry="5"/>
+  <rect x="560" y="235" width="80" height="30" fill="#E53935" rx="5" ry="5"/>
+  
+  <!-- Roads and paths -->
+  <rect x="0" y="650" width="1200" height="20" fill="#A9A9A9"/>
+  <rect x="575" y="650" width="50" height="150" fill="#A9A9A9"/>
+  
+  <!-- Trees and landscaping -->
+  <circle cx="180" cy="600" r="40" fill="#388E3C"/>
+  <circle cx="1020" cy="600" r="40" fill="#388E3C"/>
+  <circle cx="120" cy="580" r="30" fill="#388E3C"/>
+  <circle cx="1080" cy="580" r="30" fill="#388E3C"/>
+  
+  <!-- Ambulance -->
+  <rect x="400" y="680" width="100" height="50" fill="#FFFFFF" stroke="#DDDDDD" stroke-width="1" rx="10" ry="10"/>
+  <rect x="440" y="660" width="60" height="30" fill="#FFFFFF" stroke="#DDDDDD" stroke-width="1"/>
+  <circle cx="420" cy="730" r="15" fill="#333333"/>
+  <circle cx="480" cy="730" r="15" fill="#333333"/>
+  <rect x="445" y="680" width="30" height="20" fill="#F44336"/>
+  <rect x="450" y="670" width="5" height="15" fill="#FFFFFF"/>
+  <rect x="445" y="675" width="15" height="5" fill="#FFFFFF"/>
+  
+  <!-- Overlay for dark gradient effect -->
+  <rect width="100%" height="100%" fill="url(#overlay)"/>
+</svg>
