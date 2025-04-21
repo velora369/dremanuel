@@ -9,7 +9,7 @@ const HeroSection: React.FC = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat hero-gradient"
         style={{ 
-          backgroundImage: `url('/attached_assets/images/hrba.webp')` 
+          backgroundImage: `url('/images/hrba.webp')` 
         }}
       />
       

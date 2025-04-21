@@ -39,7 +39,7 @@ const TestimonialsSection: React.FC = () => {
                     {testimonial.isGoogle ? (
                       <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center mb-2 shadow-sm">
                         <img 
-                          src="/attached_assets/images/google-avaliacao.webp" 
+                          src="/images/google-avaliacao.webp" 
                           alt="Google Avaliação" 
                           className="w-16 h-16 object-contain"
                         />

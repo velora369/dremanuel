@@ -13,16 +13,10 @@ const Footer: React.FC = () => {
           
           <div className="flex flex-col items-center md:items-end">
             <div className="flex space-x-4 mb-3">
-              <a href="#" className="text-white hover:text-[#D8D2C0] transition-colors">
+              <a href="https://www.instagram.com/nefro.esposito?igsh=MTlpbDM5ZGc3aXJzZg==" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#D8D2C0] transition-colors">
                 <i className="fab fa-instagram text-xl"></i>
               </a>
-              <a href="#" className="text-white hover:text-[#D8D2C0] transition-colors">
-                <i className="fab fa-facebook text-xl"></i>
-              </a>
-              <a href="#" className="text-white hover:text-[#D8D2C0] transition-colors">
-                <i className="fab fa-linkedin text-xl"></i>
-              </a>
-              <a href="#" className="text-white hover:text-[#D8D2C0] transition-colors">
+              <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5593991674540" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#D8D2C0] transition-colors">
                 <i className="fab fa-whatsapp text-xl"></i>
               </a>
             </div>

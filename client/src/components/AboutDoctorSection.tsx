@@ -23,7 +23,7 @@ const AboutDoctorSection: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <img 
-              src="/attached_assets/images/perfil.webp" 
+              src="/images/perfil.webp" 
               alt="Dr. Emanuel Esposito" 
               className="w-full h-auto rounded-2xl shadow-lg object-cover"
             />
