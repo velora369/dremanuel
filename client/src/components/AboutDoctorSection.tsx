@@ -55,7 +55,7 @@ const AboutDoctorSection: React.FC = () => {
               ))}
             </motion.div>
             
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 justify-center">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 <Button variant="default" className="btn-primary inline-block">
                   <i className="fab fa-whatsapp mr-2"></i> Agendar consulta

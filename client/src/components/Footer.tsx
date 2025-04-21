@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import logoImage from '../assets/logo-emanuel-novo.png';
 
 const Footer: React.FC = () => {
   return (
@@ -7,7 +8,14 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0 text-center md:text-left flex flex-col items-center md:items-start">
-
+            <div className="h-20 w-auto mb-4">
+              <img 
+                src={logoImage} 
+                alt="Logo Dr. Emanuel Esposito" 
+                className="h-full w-auto object-contain"
+                style={{ filter: 'brightness(0) invert(1)' }}
+              />
+            </div>
             <div className="font-montserrat font-bold text-xl mb-1">Dr. Emanuel Esposito</div>
             <p className="text-white/70 text-sm">Médico Nefrologista | CRM-PA: 9173</p>
             <p className="text-white/70 text-sm">RQE CM: 8787 | RQE NEFRO: 8786</p>

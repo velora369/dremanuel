@@ -12,7 +12,7 @@ const HeroSection: React.FC = () => {
       
       <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
         <motion.div 
-          className="max-w-3xl"
+          className="max-w-3xl mx-auto text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -36,7 +36,7 @@ const HeroSection: React.FC = () => {
           </motion.p>
           
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4"
+            className="flex flex-col sm:flex-row gap-4 justify-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -45,7 +45,7 @@ const HeroSection: React.FC = () => {
               <Button 
                 variant="secondary" 
                 size="lg" 
-                className="btn-primary w-full sm:w-auto flex items-center justify-center sm:justify-start"
+                className="btn-primary w-full sm:w-auto flex items-center justify-center"
               >
                 <i className="fab fa-whatsapp mr-2 text-lg"></i> Agendar consulta
               </Button>
@@ -54,7 +54,7 @@ const HeroSection: React.FC = () => {
             <Button 
               variant="white" 
               size="lg" 
-              className="btn-secondary w-full sm:w-auto flex items-center justify-center sm:justify-start"
+              className="btn-secondary w-full sm:w-auto flex items-center justify-center"
               onClick={() => {
                 const courseElement = document.getElementById('curso');
                 if (courseElement) {
