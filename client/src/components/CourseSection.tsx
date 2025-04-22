@@ -13,11 +13,11 @@ const CourseSection: React.FC = () => {
   const [currentCourseImage, setCurrentCourseImage] = useState(0);
   const courseImages = [courseImage1, courseImage2, courseImage3];
   
-  // Efeito para alternar as imagens a cada 2 segundos
+  // Efeito para alternar as imagens a cada 4 segundos
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentCourseImage((prev) => (prev + 1) % courseImages.length);
-    }, 2000);
+    }, 4000);
     
     return () => clearInterval(interval);
   }, []);
@@ -61,7 +61,7 @@ const CourseSection: React.FC = () => {
               </div>
               
               <div className="lg:w-2/5">
-                <div className="relative overflow-hidden rounded-xl shadow-lg h-[300px]">
+                <div className="relative overflow-hidden rounded-xl shadow-lg h-[380px]">
                   {courseImages.map((image, index) => (
                     <motion.div
                       key={index}
@@ -76,7 +76,7 @@ const CourseSection: React.FC = () => {
                       <img 
                         src={image} 
                         alt={`Curso POCUS aplicado à clínica médica - Imagem ${index + 1}`} 
-                        className="h-full w-full object-cover" 
+                        className="h-full w-full object-contain" 
                       />
                     </motion.div>
                   ))}

@@ -23,11 +23,11 @@ const AboutDoctorSection: React.FC = () => {
   const [currentDoctorImage, setCurrentDoctorImage] = useState(0);
   const doctorImages = [doctorImage1, doctorImage2, doctorImage3, doctorImage4];
   
-  // Efeito para alternar as imagens a cada 2 segundos
+  // Efeito para alternar as imagens a cada 4 segundos
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentDoctorImage((prev) => (prev + 1) % doctorImages.length);
-    }, 2000);
+    }, 4000);
     
     return () => clearInterval(interval);
   }, []);
@@ -44,7 +44,7 @@ const AboutDoctorSection: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="relative overflow-hidden rounded-xl shadow-lg h-[400px]">
+            <div className="relative overflow-hidden rounded-xl shadow-lg h-[500px]">
               {doctorImages.map((image, index) => (
                 <motion.div
                   key={index}
