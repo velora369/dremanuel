@@ -1,9 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { COURSE_FEATURES, COURSE_TOPICS } from '@/lib/constants';
 
+// Importar imagens do carrossel do curso
+import courseImage1 from '../assets/images/course/nova2cursopocus.webp';
+import courseImage2 from '../assets/images/course/cursopocus4.webp';
+import courseImage3 from '../assets/images/course/coursopocus3.webp';
+
 const CourseSection: React.FC = () => {
+  // Estado para controlar as imagens do carrossel do curso
+  const [currentCourseImage, setCurrentCourseImage] = useState(0);
+  const courseImages = [courseImage1, courseImage2, courseImage3];
+  
+  // Efeito para alternar as imagens a cada 2 segundos
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentCourseImage((prev) => (prev + 1) % courseImages.length);
+    }, 2000);
+    
+    return () => clearInterval(interval);
+  }, []);
   return (
     <section id="curso" className="py-16 bg-primary text-white">
       <div className="container mx-auto px-4">
@@ -44,11 +61,36 @@ const CourseSection: React.FC = () => {
               </div>
               
               <div className="lg:w-2/5">
-                <img 
-                  src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/04/pocus-curso-.webp" 
-                  alt="Curso POCUS aplicado à clínica médica" 
-                  className="w-full h-auto rounded-xl"
-                />
+                <div className="relative overflow-hidden rounded-xl shadow-lg h-[300px]">
+                  {courseImages.map((image, index) => (
+                    <motion.div
+                      key={index}
+                      className="absolute inset-0 h-full w-full"
+                      initial={{ opacity: 0 }}
+                      animate={{ 
+                        opacity: currentCourseImage === index ? 1 : 0,
+                        zIndex: currentCourseImage === index ? 10 : 0 
+                      }}
+                      transition={{ duration: 0.5 }}
+                    >
+                      <img 
+                        src={image} 
+                        alt={`Curso POCUS aplicado à clínica médica - Imagem ${index + 1}`} 
+                        className="h-full w-full object-cover" 
+                      />
+                    </motion.div>
+                  ))}
+                  
+                  {/* Indicadores do carrossel */}
+                  <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20">
+                    {courseImages.map((_, index) => (
+                      <div 
+                        key={index}
+                        className={`h-2 w-2 rounded-full ${currentCourseImage === index ? 'bg-white' : 'bg-white/50'}`}
+                      ></div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
             

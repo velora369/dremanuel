@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { WHATSAPP_URL } from '@/lib/constants';
+
+// Importar imagens do carrossel
+import doctorImage1 from '../assets/images/doctor/nova3topdr.webp';
+import doctorImage2 from '../assets/images/doctor/novatopdr.webp';
+import doctorImage3 from '../assets/images/doctor/nova2topdr.webp';
+import doctorImage4 from '../assets/images/doctor/mariaedr.webp';
 
 const AboutDoctorSection: React.FC = () => {
   const stats = [
@@ -12,13 +18,67 @@ const AboutDoctorSection: React.FC = () => {
     { value: "25+", label: "Prêmios recebidos" },
     { value: "10+", label: "Projetos de pesquisa" }
   ];
+  
+  // Estado para controlar as imagens do carrossel
+  const [currentDoctorImage, setCurrentDoctorImage] = useState(0);
+  const doctorImages = [doctorImage1, doctorImage2, doctorImage3, doctorImage4];
+  
+  // Efeito para alternar as imagens a cada 2 segundos
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentDoctorImage((prev) => (prev + 1) % doctorImages.length);
+    }, 2000);
+    
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section id="sobre" className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col md:flex-row items-center gap-8">
+          {/* Carrossel de imagens */}
+          <motion.div
+            className="w-full md:w-2/5 mb-8 md:mb-0"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="relative overflow-hidden rounded-xl shadow-lg h-[400px]">
+              {doctorImages.map((image, index) => (
+                <motion.div
+                  key={index}
+                  className="absolute inset-0 h-full w-full"
+                  initial={{ opacity: 0 }}
+                  animate={{ 
+                    opacity: currentDoctorImage === index ? 1 : 0,
+                    zIndex: currentDoctorImage === index ? 10 : 0 
+                  }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <img 
+                    src={image} 
+                    alt={`Dr. Emanuel Esposito - Imagem ${index + 1}`} 
+                    className="h-full w-full object-cover" 
+                  />
+                </motion.div>
+              ))}
+              
+              {/* Indicadores do carrossel */}
+              <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20">
+                {doctorImages.map((_, index) => (
+                  <div 
+                    key={index}
+                    className={`h-2 w-2 rounded-full ${currentDoctorImage === index ? 'bg-white' : 'bg-white/50'}`}
+                  ></div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+          
+          {/* Informações do médico */}
           <motion.div 
-            className="max-w-3xl mx-auto"
+            className="w-full md:w-3/5"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
