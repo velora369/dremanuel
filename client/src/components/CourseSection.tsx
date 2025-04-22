@@ -52,8 +52,8 @@ const CourseSection: React.FC = () => {
                 </div>
                 
                 <div className="flex justify-center mb-6">
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLScBB7A20kLP1zRyIXh8f7kTDrPR47B5G11Maf4_fx9nW_efHg/viewform?pli=1" target="_blank" rel="noopener noreferrer">
-                    <Button variant="white" size="lg" className="btn-secondary">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLScBB7A20kLP1zRyIXh8f7kTDrPR47B5G11Maf4_fx9nW_efHg/viewform?pli=1" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto mx-auto text-center">
+                    <Button variant="white" size="lg" className="btn-secondary w-full sm:w-auto mx-auto">
                       Lista de espera 2º Integra POCUS
                     </Button>
                   </a>

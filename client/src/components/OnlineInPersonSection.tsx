@@ -60,7 +60,7 @@ const OnlineInPersonSection: React.FC = () => {
               Atendimento completo em Santarém, com exames e procedimentos realizados no mesmo local.
             </p>
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-              <Button variant="white" size="sm" className="btn-secondary inline-block w-48">
+              <Button variant="white" size="sm" className="btn-secondary inline-block w-48 whitespace-nowrap">
                 <i className="fab fa-whatsapp mr-2"></i> Agendar Presencial
               </Button>
             </a>
@@ -83,7 +83,7 @@ const OnlineInPersonSection: React.FC = () => {
               Consulta online com a mesma qualidade, de qualquer lugar do Brasil e com total privacidade.
             </p>
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-              <Button variant="white" size="sm" className="btn-secondary inline-block w-48">
+              <Button variant="white" size="sm" className="btn-secondary inline-block w-48 whitespace-nowrap">
                 <i className="fab fa-whatsapp mr-2"></i> Agendar Telemedicina
               </Button>
             </a>
