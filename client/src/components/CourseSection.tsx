@@ -61,7 +61,7 @@ const CourseSection: React.FC = () => {
               </div>
               
               <div className="lg:w-2/5">
-                <div className="relative overflow-hidden rounded-xl shadow-lg h-[380px]">
+                <div className="relative overflow-hidden rounded-xl shadow-lg h-[380px] group">
                   {courseImages.map((image, index) => (
                     <motion.div
                       key={index}
@@ -81,13 +81,30 @@ const CourseSection: React.FC = () => {
                     </motion.div>
                   ))}
                   
+                  {/* Controles de navegação */}
+                  <button 
+                    className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/20 hover:bg-white/40 rounded-full flex items-center justify-center text-white z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    onClick={() => setCurrentCourseImage((prev) => (prev === 0 ? courseImages.length - 1 : prev - 1))}
+                  >
+                    <i className="fas fa-chevron-left"></i>
+                  </button>
+                  
+                  <button 
+                    className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/20 hover:bg-white/40 rounded-full flex items-center justify-center text-white z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    onClick={() => setCurrentCourseImage((prev) => (prev + 1) % courseImages.length)}
+                  >
+                    <i className="fas fa-chevron-right"></i>
+                  </button>
+                  
                   {/* Indicadores do carrossel */}
                   <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20">
                     {courseImages.map((_, index) => (
-                      <div 
+                      <button 
                         key={index}
-                        className={`h-2 w-2 rounded-full ${currentCourseImage === index ? 'bg-white' : 'bg-white/50'}`}
-                      ></div>
+                        className={`h-2 w-2 rounded-full ${currentCourseImage === index ? 'bg-white' : 'bg-white/50'} hover:bg-white/90 transition-colors duration-200`}
+                        onClick={() => setCurrentCourseImage(index)}
+                        aria-label={`Ver imagem ${index + 1}`}
+                      ></button>
                     ))}
                   </div>
                 </div>
