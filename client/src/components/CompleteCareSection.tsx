@@ -84,12 +84,28 @@ const CompleteCareSection: React.FC = () => {
             >
               <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center text-secondary text-2xl mb-4 relative">
                 {service.useCustomIcon ? (
-                  <img 
-                    src={service.customIcon} 
-                    alt={service.title} 
-                    className="w-6 h-6 object-contain absolute right-2 bottom-1"
-                    style={{ transform: 'rotate(15deg)' }}
-                  />
+                  <div className="relative h-6 w-6">
+                    <img 
+                      src={service.customIcon} 
+                      alt={service.title} 
+                      className="w-6 h-6 object-contain"
+                      style={{ 
+                        position: 'absolute',
+                        top: '50%', 
+                        left: '50%', 
+                        transform: 'translate(-50%, -50%)',
+                        filter: 'drop-shadow(0px 0px 1px rgba(0,0,0,0.2))'
+                      }}
+                    />
+                    {/* Linha conectora à borda */}
+                    <div className="absolute bg-secondary/60" style={{
+                      width: '15px',
+                      height: '1px',
+                      right: '-6px',
+                      top: '66%',
+                      transform: 'rotate(-45deg)'
+                    }}></div>
+                  </div>
                 ) : (
                   <i className={`fas ${service.icon}`}></i>
                 )}
