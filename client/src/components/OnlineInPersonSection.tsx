@@ -44,7 +44,7 @@ const OnlineInPersonSection: React.FC = () => {
           viewport={{ once: true }}
         >
           <motion.div 
-            className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center card-hover"
+            className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center card-hover flex flex-col h-[340px]"
             variants={item}
             whileHover={{ 
               y: -10, 
@@ -56,18 +56,20 @@ const OnlineInPersonSection: React.FC = () => {
               <i className="fas fa-hospital"></i>
             </div>
             <h3 className="text-xl font-montserrat font-semibold mb-3">Consulta Presencial</h3>
-            <p className="mb-6 opacity-80">
+            <p className="opacity-80 flex-grow">
               Atendimento completo em Santarém, com exames e procedimentos realizados no mesmo local.
             </p>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-              <Button variant="white" size="sm" className="btn-secondary inline-block w-48 whitespace-nowrap">
-                <i className="fab fa-whatsapp mr-2"></i> Agendar Presencial
-              </Button>
-            </a>
+            <div className="mt-auto pt-4">
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                <Button variant="white" size="sm" className="btn-secondary inline-block w-48 whitespace-nowrap">
+                  <i className="fab fa-whatsapp mr-2"></i> Agendar Presencial
+                </Button>
+              </a>
+            </div>
           </motion.div>
           
           <motion.div 
-            className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center card-hover"
+            className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center card-hover flex flex-col h-[340px]"
             variants={item}
             whileHover={{ 
               y: -10, 
@@ -79,14 +81,16 @@ const OnlineInPersonSection: React.FC = () => {
               <i className="fas fa-video"></i>
             </div>
             <h3 className="text-xl font-montserrat font-semibold mb-3">Telemedicina</h3>
-            <p className="mb-6 opacity-80">
-              Consulta online com a mesma qualidade, de qualquer lugar do Brasil e com total privacidade.
+            <p className="opacity-80 flex-grow">
+              Consulta online com a mesma qualidade, de qualquer lugar do Brasil e com total privacidade. Acompanhamento especializado com laudos e orientações detalhadas.
             </p>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-              <Button variant="white" size="sm" className="btn-secondary inline-block w-48 whitespace-nowrap">
-                <i className="fab fa-whatsapp mr-2"></i> Agendar Telemedicina
-              </Button>
-            </a>
+            <div className="mt-auto pt-4">
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                <Button variant="white" size="sm" className="btn-secondary inline-block w-48 whitespace-nowrap">
+                  <i className="fab fa-whatsapp mr-2"></i> Agendar Telemedicina
+                </Button>
+              </a>
+            </div>
           </motion.div>
         </motion.div>
         
