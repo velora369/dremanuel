@@ -82,9 +82,14 @@ const CompleteCareSection: React.FC = () => {
                 transition: { duration: 0.3 } 
               }}
             >
-              <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center text-secondary text-2xl mb-4">
+              <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center text-secondary text-2xl mb-4 relative">
                 {service.useCustomIcon ? (
-                  <img src={service.customIcon} alt={service.title} className="w-6 h-6 object-contain" />
+                  <img 
+                    src={service.customIcon} 
+                    alt={service.title} 
+                    className="w-6 h-6 object-contain absolute right-2 bottom-1"
+                    style={{ transform: 'rotate(15deg)' }}
+                  />
                 ) : (
                   <i className={`fas ${service.icon}`}></i>
                 )}
