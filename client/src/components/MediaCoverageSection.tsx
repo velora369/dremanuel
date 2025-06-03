@@ -1,23 +1,21 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import { Pin, ArrowRight } from 'lucide-react';
 
 const MediaCoverageSection: React.FC = () => {
   const mediaItems = [
     {
       title: 'G1: Modelo de captação e transplante de rim é apresentado por médico do HRBA em congresso brasileiro',
-      url: 'https://g1.globo.com/pa/santarem-regiao/noticia/2021/10/22/modelo-de-captacao-e-transplante-de-rim-e-apresentado-por-medico-do-hrba-em-congresso-brasileiro.ghtml',
-      icon: '📌'
+      url: 'https://g1.globo.com/pa/santarem-regiao/noticia/2021/10/22/modelo-de-captacao-e-transplante-de-rim-e-apresentado-por-medico-do-hrba-em-congresso-brasileiro.ghtml'
     },
     {
       title: 'Globoplay: Conheça história de paciente que recebeu um rim e teve esperanças renovadas (saúde renal)',
-      url: 'https://globoplay.globo.com/v/13418593/',
-      icon: '📌'
+      url: 'https://globoplay.globo.com/v/13418593/'
     },
     {
       title: 'Globoplay: 2ª corrida \'Doando Pela Vida\' é realizada em Santarém (Evento organizado pelo Dr. Emanuel Esposito)',
-      url: 'https://globoplay.globo.com/v/11936358/',
-      icon: '📌'
+      url: 'https://globoplay.globo.com/v/11936358/'
     }
   ];
 
@@ -76,13 +74,13 @@ const MediaCoverageSection: React.FC = () => {
                 transition: { duration: 0.3 } 
               }}
             >
-              <div className="text-4xl mb-4">
-                {media.icon}
+              <div className="text-secondary mb-4">
+                <Pin size={32} />
               </div>
               <h3 className="font-montserrat font-semibold text-primary mb-4">{media.title}</h3>
-              <Button variant="link" className="text-secondary mt-auto">
+              <Button variant="link" className="text-secondary mt-auto flex items-center">
                 Ler matéria
-                <i className="fas fa-arrow-right ml-2"></i>
+                <ArrowRight size={16} className="ml-2" />
               </Button>
             </motion.a>
           ))}

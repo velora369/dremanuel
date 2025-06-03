@@ -1,24 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import { Headphones } from 'lucide-react';
 import voxcastImage from '../assets/podcasts/voxcast-esposito.webp';
 
 const PodcastsSection: React.FC = () => {
   const podcasts = [
     {
       title: 'MedTalks Ep. 11 Saúde Renal em Foco: Como Cuidar dos Seus Rins',
-      url: 'https://www.youtube.com/watch?v=vQZclujnIEI',
-      icon: '🎧'
+      url: 'https://www.youtube.com/watch?v=vQZclujnIEI'
     },
     {
       title: 'MedTalks #05 Transplante – Panorama dos Pacientes Renais Crônicos e o Transplante Renal no Brasil',
-      url: 'https://www.youtube.com/watch?v=whK1u9IT7so',
-      icon: '🎧'
+      url: 'https://www.youtube.com/watch?v=whK1u9IT7so'
     },
     {
       title: 'VoxCast #028 POCUS na prática médica — Dr. Emanuel Esposito & Luan Moraes',
-      url: 'https://www.youtube.com/watch?v=ZXRbcpKPYN4',
-      icon: '🎧'
+      url: 'https://www.youtube.com/watch?v=ZXRbcpKPYN4'
     }
   ];
 
@@ -93,13 +91,13 @@ const PodcastsSection: React.FC = () => {
                 transition: { duration: 0.3 } 
               }}
             >
-              <div className="text-4xl mb-4">
-                {podcast.icon}
+              <div className="text-secondary mb-4">
+                <Headphones size={32} />
               </div>
               <h3 className="font-montserrat font-semibold text-primary mb-4">{podcast.title}</h3>
-              <Button variant="link" className="text-secondary mt-auto">
+              <Button variant="link" className="text-secondary mt-auto flex items-center">
                 Ouvir episódio
-                <i className="fas fa-headphones ml-2"></i>
+                <Headphones size={16} className="ml-2" />
               </Button>
             </motion.a>
           ))}
