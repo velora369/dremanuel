@@ -51,37 +51,37 @@ export const MORE_AWARDS = [
 // Specialties
 export const SPECIALTIES = [
   {
-    icon: "fa-kidneys",
+    icon: "kidney",
     title: "Doença renal crônica",
     description: "Diagnóstico precoce e tratamento para retardar a progressão"
   },
   {
-    icon: "fa-cubes",
+    icon: "gem",
     title: "Litíase renal",
     description: "Tratamento e prevenção de pedras nos rins"
   },
   {
-    icon: "fa-heartbeat",
+    icon: "heart-pulse",
     title: "Hipertensão arterial",
     description: "Controle especializado com monitoramento MAPA"
   },
   {
-    icon: "fa-bacteria",
+    icon: "bug",
     title: "Infecção urinária",
     description: "Tratamento de infecções complexas e recorrentes"
   },
   {
-    icon: "fa-shield-virus",
+    icon: "shield-alert",
     title: "Nefrites",
     description: "Diagnóstico e tratamento de inflamações renais"
   },
   {
-    icon: "fa-syringe",
+    icon: "syringe",
     title: "Doença renal do diabetes",
     description: "Cuidado especializado da nefropatia diabética"
   },
   {
-    icon: "fa-circle-nodes",
+    icon: "network",
     title: "Cistos renais",
     description: "Diagnóstico, acompanhamento e tratamento de cistos renais"
   }

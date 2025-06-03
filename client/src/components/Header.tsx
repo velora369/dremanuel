@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { WHATSAPP_URL } from '@/lib/constants';
+import { Menu, X } from 'lucide-react';
 // Importando o logo diretamente como um módulo
 import logoImage from '../assets/logo-emanuel-novo.png';
 
@@ -71,11 +72,11 @@ const Header: React.FC = () => {
         
         <div className="flex">
           <button 
-            className="text-primary text-2xl" 
+            className="text-primary p-2" 
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
           >
-            <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>

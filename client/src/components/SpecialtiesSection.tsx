@@ -2,8 +2,29 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SPECIALTIES } from '@/lib/constants';
 import kidneyIcon from '../assets/icons/new-kidney-icon.webp';
+import { 
+  Gem, 
+  HeartPulse, 
+  Bug, 
+  ShieldAlert, 
+  Syringe, 
+  Network 
+} from 'lucide-react';
 
 const SpecialtiesSection: React.FC = () => {
+  const getSpecialtyIcon = (iconName: string) => {
+    const iconComponents: { [key: string]: React.ReactNode } = {
+      'kidney': <img src={kidneyIcon} alt="Doença renal crônica" className="w-6 h-6 object-contain" />,
+      'gem': <Gem size={24} />,
+      'heart-pulse': <HeartPulse size={24} />,
+      'bug': <Bug size={24} />,
+      'shield-alert': <ShieldAlert size={24} />,
+      'syringe': <Syringe size={24} />,
+      'network': <Network size={24} />
+    };
+    return iconComponents[iconName] || <Network size={24} />;
+  };
+
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -56,12 +77,8 @@ const SpecialtiesSection: React.FC = () => {
                 transition: { duration: 0.3 } 
               }}
             >
-              <div className="bg-secondary/20 p-3 rounded-full text-secondary text-xl mb-3">
-                {specialty.title === "Doença renal crônica" ? (
-                  <img src={kidneyIcon} alt="Doença renal crônica" className="w-8 h-8 object-contain" />
-                ) : (
-                  <i className={`fas ${specialty.icon}`}></i>
-                )}
+              <div className="bg-secondary/20 p-3 rounded-full text-secondary mb-3 flex items-center justify-center">
+                {getSpecialtyIcon(specialty.icon)}
               </div>
               <div>
                 <h3 className="font-montserrat font-semibold text-primary mb-1">{specialty.title}</h3>
