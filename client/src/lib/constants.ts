@@ -2,6 +2,12 @@
 export const WHATSAPP_PHONE = "5593991674540";
 export const WHATSAPP_BASE_URL = "https://api.whatsapp.com/send";
 
+// Social Media Links
+export const SOCIAL_LINKS = {
+  INSTAGRAM: "https://www.instagram.com/nefro.esposito?igsh=MTlpbDM5ZGc3aXJzZg==",
+  WHATSAPP: `https://api.whatsapp.com/send?1=pt_BR&phone=${WHATSAPP_PHONE}`
+};
+
 // WhatsApp Messages
 export const WHATSAPP_MESSAGES = {
   // Mensagens para tipos de consulta
