@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { WHATSAPP_MESSAGES, createWhatsAppURL, SOCIAL_LINKS } from '@/lib/constants';
-import { Menu, X, Instagram } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 // Importando o logo diretamente como um módulo
 import logoImage from '../assets/logo-emanuel-novo.png';
@@ -135,7 +136,8 @@ const Header: React.FC = () => {
                   rel="noopener noreferrer"
                   className="flex-1"
                 >
-                  <Button variant="default" size="sm" className="w-full">
+                  <Button variant="default" size="sm" className="w-full flex items-center justify-center gap-2">
+                    <FaWhatsapp className="text-sm" />
                     WhatsApp
                   </Button>
                 </a>
@@ -145,7 +147,8 @@ const Header: React.FC = () => {
                   rel="noopener noreferrer"
                   className="flex-1"
                 >
-                  <Button variant="outline" size="sm" className="w-full">
+                  <Button variant="outline" size="sm" className="w-full flex items-center justify-center gap-2">
+                    <FaInstagram className="text-sm" />
                     Instagram
                   </Button>
                 </a>
