@@ -1,12 +1,38 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { AWARDS, MORE_AWARDS } from '@/lib/constants';
+import { 
+  Award, 
+  GraduationCap, 
+  Medal, 
+  HeartHandshake, 
+  Trophy, 
+  Crown, 
+  FileCheck, 
+  ScrollText,
+  ChevronDown,
+  ChevronUp
+} from 'lucide-react';
 
 const ExperienceSection: React.FC = () => {
   const [showMoreAwards, setShowMoreAwards] = useState(false);
 
   const toggleMoreAwards = () => {
     setShowMoreAwards(!showMoreAwards);
+  };
+
+  const getIcon = (iconName: string) => {
+    const iconComponents: { [key: string]: React.ReactNode } = {
+      'award': <Award size={32} />,
+      'graduation-cap': <GraduationCap size={32} />,
+      'medal': <Medal size={32} />,
+      'heart-handshake': <HeartHandshake size={32} />,
+      'trophy': <Trophy size={32} />,
+      'crown': <Crown size={32} />,
+      'file-check': <FileCheck size={32} />,
+      'scroll': <ScrollText size={32} />
+    };
+    return iconComponents[iconName] || <Award size={32} />;
   };
 
   const containerVariants = {
@@ -59,7 +85,7 @@ const ExperienceSection: React.FC = () => {
               className="award-badge bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center card-hover"
               variants={itemVariants}
             >
-              <div className="text-4xl text-secondary mb-3">{award.icon}</div>
+              <div className="text-secondary mb-3">{getIcon(award.icon)}</div>
               <h3 className="font-montserrat font-semibold text-primary">{award.title}</h3>
               <p className="text-sm text-primary/70 mt-2">{award.description}</p>
             </motion.div>
@@ -72,7 +98,9 @@ const ExperienceSection: React.FC = () => {
             onClick={toggleMoreAwards}
           >
             <span>{showMoreAwards ? 'Ver menos reconhecimentos' : 'Ver mais reconhecimentos'}</span>
-            <i className={`fas fa-chevron-${showMoreAwards ? 'up' : 'down'} ml-2`}></i>
+            <div className="ml-2">
+              {showMoreAwards ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+            </div>
           </button>
         </div>
         
@@ -91,7 +119,7 @@ const ExperienceSection: React.FC = () => {
                 className="award-badge bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center card-hover"
                 variants={itemVariants}
               >
-                <div className="text-4xl text-secondary mb-3">{award.icon}</div>
+                <div className="text-secondary mb-3">{getIcon(award.icon)}</div>
                 <h3 className="font-montserrat font-semibold text-primary">{award.title}</h3>
                 <p className="text-sm text-primary/70 mt-2">{award.description}</p>
               </motion.div>

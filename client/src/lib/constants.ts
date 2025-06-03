@@ -4,22 +4,22 @@ export const WHATSAPP_URL = "https://api.whatsapp.com/send?1=pt_BR&phone=5593991
 // Award information
 export const AWARDS = [
   {
-    icon: "💚",
+    icon: "award",
     title: "Cidadão Santareno",
     description: "Câmara Municipal de Santarém (2021)"
   },
   {
-    icon: "🎓",
+    icon: "graduation-cap",
     title: "Professor Homenageado",
     description: "UEPA – Turma 2013.2 (2019)"
   },
   {
-    icon: "🏅",
+    icon: "medal",
     title: "Medalha da Solidariedade",
     description: "ALEPA, Doador de Órgãos (2019)"
   },
   {
-    icon: "🧬",
+    icon: "heart-handshake",
     title: "Moção de Louvor",
     description: "Primeiro Transplante de Rim no HRBA (2016)"
   }
@@ -27,22 +27,22 @@ export const AWARDS = [
 
 export const MORE_AWARDS = [
   {
-    icon: "🥉",
+    icon: "trophy",
     title: "Menção Honrosa - 3º Lugar",
     description: "II Salão Científico de Medicina – UEPA (2018)"
   },
   {
-    icon: "🥇",
+    icon: "crown",
     title: "Menção Honrosa - 1º Lugar",
     description: "II Salão Científico de Medicina – UEPA (2018)"
   },
   {
-    icon: "🧾",
+    icon: "file-check",
     title: "Certificação Profissional",
     description: "AMB + SBN (2012)"
   },
   {
-    icon: "📜",
+    icon: "scroll",
     title: "Título de Especialista",
     description: "Nefrologia – SBN (2006)"
   }
