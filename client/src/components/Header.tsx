@@ -9,15 +9,30 @@ import logoImage from '../assets/logo-emanuel-novo.png';
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
 
   useEffect(() => {
+    let scrollTimer: NodeJS.Timeout;
+
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       setIsScrolled(scrollPosition > 10);
+      setIsScrolling(true);
+
+      // Clear the previous timer
+      clearTimeout(scrollTimer);
+
+      // Set a new timer to detect when scrolling stops
+      scrollTimer = setTimeout(() => {
+        setIsScrolling(false);
+      }, 150); // Adjust delay as needed
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(scrollTimer);
+    };
   }, []);
 
   const toggleMobileMenu = () => {
@@ -37,7 +52,7 @@ const Header: React.FC = () => {
   return (
     <header className={`fixed w-full glass-nav z-50 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-3'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <div className="flex items-center">
+        <div className="flex items-center space-x-3">
           <div className="h-14 w-auto">
             <img 
               src={logoImage} 
@@ -45,6 +60,16 @@ const Header: React.FC = () => {
               className="h-full w-auto object-contain"
               style={{ transform: 'scale(1.8)' }}
             />
+          </div>
+          <div 
+            className={`transition-all duration-300 ease-in-out overflow-hidden ${
+              isScrolling ? 'opacity-0 max-w-0' : 'opacity-100 max-w-xs'
+            }`}
+          >
+            <h1 className="text-primary font-montserrat font-semibold text-lg whitespace-nowrap">
+              Emanuel Esposito
+              <span className="block text-sm font-normal text-primary/70">Nefrologista</span>
+            </h1>
           </div>
         </div>
         
