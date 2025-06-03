@@ -97,107 +97,59 @@ const Header: React.FC = () => {
         </div>
       </div>
       
-      {/* Modern Mobile menu */}
+      {/* Simple Mobile menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div 
-            className="fixed inset-0 top-[80px] bg-white z-40"
-            initial={{ opacity: 0, y: -20 }}
+            className="absolute top-full left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-lg z-40"
+            initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
           >
-            <div className="container mx-auto px-6 py-8 h-full flex flex-col">
-              {/* Navigation Items */}
-              <nav className="flex-1">
-                <motion.div 
-                  className="space-y-6"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.1, staggerChildren: 0.1 }}
-                >
-                  {[
-                    { label: 'Sobre', id: 'sobre', icon: 'fas fa-user-md' },
-                    { label: 'Especialidades', id: 'especialidades', icon: 'fas fa-stethoscope' },
-                    { label: 'Atendimento', id: 'atendimento', icon: 'fas fa-calendar-check' },
-                    { label: 'Curso POCUS', id: 'curso', icon: 'fas fa-graduation-cap' },
-                    { label: 'Entrevistas', id: 'na-midia', icon: 'fas fa-microphone' },
-                    { label: 'Podcasts', id: 'podcasts', icon: 'fas fa-podcast' }
-                  ].map((item, index) => (
-                    <motion.button
-                      key={item.id}
-                      onClick={() => handleNavLinkClick(item.id)}
-                      className="w-full text-left py-4 px-6 rounded-xl bg-gradient-to-r from-gray-50 to-gray-100 hover:from-secondary/10 hover:to-secondary/20 transition-all duration-300 group border border-gray-100 hover:border-secondary/30"
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.1 + (index * 0.1) }}
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      <div className="flex items-center space-x-4">
-                        <div className="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center group-hover:bg-secondary/30 transition-colors">
-                          <i className={`${item.icon} text-secondary text-lg`}></i>
-                        </div>
-                        <span className="text-primary font-montserrat font-medium text-lg group-hover:text-secondary transition-colors">
-                          {item.label}
-                        </span>
-                      </div>
-                    </motion.button>
-                  ))}
-                </motion.div>
+            <div className="container mx-auto px-6 py-4">
+              <nav className="space-y-2">
+                {[
+                  { label: 'Sobre', id: 'sobre' },
+                  { label: 'Especialidades', id: 'especialidades' },
+                  { label: 'Atendimento', id: 'atendimento' },
+                  { label: 'Curso POCUS', id: 'curso' },
+                  { label: 'Entrevistas', id: 'na-midia' },
+                  { label: 'Podcasts', id: 'podcasts' }
+                ].map((item) => (
+                  <button
+                    key={item.id}
+                    onClick={() => handleNavLinkClick(item.id)}
+                    className="block w-full text-left py-3 px-4 text-primary hover:text-secondary hover:bg-secondary/5 rounded-lg transition-all duration-200"
+                  >
+                    {item.label}
+                  </button>
+                ))}
               </nav>
-
-              {/* Social Media Section */}
-              <motion.div 
-                className="border-t border-gray-200 pt-6 mt-6"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-              >
-                <h3 className="text-primary font-montserrat font-semibold text-lg mb-4 text-center">
-                  Conecte-se conosco
-                </h3>
-                <div className="flex justify-center space-x-6">
-                  <motion.a
-                    href={SOCIAL_LINKS.WHATSAPP}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-14 h-14 rounded-full bg-green-500 text-white shadow-lg hover:shadow-xl transition-all duration-300"
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <i className="fab fa-whatsapp text-xl"></i>
-                  </motion.a>
-                  <motion.a
-                    href={SOCIAL_LINKS.INSTAGRAM}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 text-white shadow-lg hover:shadow-xl transition-all duration-300"
-                    whileHover={{ scale: 1.1, rotate: -5 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <i className="fab fa-instagram text-xl"></i>
-                  </motion.a>
-                </div>
-                
-                {/* Quick Contact Button */}
-                <motion.div 
-                  className="mt-6"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.5 }}
+              
+              {/* Quick contact */}
+              <div className="flex gap-2 mt-4 pt-4 border-t border-gray-200">
+                <a 
+                  href={createWhatsAppURL(WHATSAPP_MESSAGES.TEAM_CONSULTATION)} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex-1"
                 >
-                  <a href={createWhatsAppURL(WHATSAPP_MESSAGES.TEAM_CONSULTATION)} target="_blank" rel="noopener noreferrer">
-                    <Button 
-                      variant="default" 
-                      className="w-full btn-primary text-lg py-4 rounded-xl shadow-lg hover:shadow-xl"
-                    >
-                      <i className="fab fa-whatsapp mr-3 text-xl"></i>
-                      Fale conosco
-                    </Button>
-                  </a>
-                </motion.div>
-              </motion.div>
+                  <Button variant="default" size="sm" className="w-full">
+                    WhatsApp
+                  </Button>
+                </a>
+                <a 
+                  href={SOCIAL_LINKS.INSTAGRAM} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex-1"
+                >
+                  <Button variant="outline" size="sm" className="w-full">
+                    Instagram
+                  </Button>
+                </a>
+              </div>
             </div>
           </motion.div>
         )}
