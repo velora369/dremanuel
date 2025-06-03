@@ -37,8 +37,8 @@ const ContactSection: React.FC = () => {
               
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
-                  <div className="text-secondary text-xl mt-1">
-                    <i className="fas fa-phone-alt"></i>
+                  <div className="text-secondary mt-1">
+                    <Phone size={20} />
                   </div>
                   <div>
                     <h4 className="font-medium text-primary">Telefone</h4>
@@ -49,8 +49,8 @@ const ContactSection: React.FC = () => {
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="text-secondary text-xl mt-1">
-                    <i className="fas fa-envelope"></i>
+                  <div className="text-secondary mt-1">
+                    <Mail size={20} />
                   </div>
                   <div>
                     <h4 className="font-medium text-primary">Email</h4>
@@ -59,8 +59,8 @@ const ContactSection: React.FC = () => {
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="text-secondary text-xl mt-1">
-                    <i className="fas fa-map-marker-alt"></i>
+                  <div className="text-secondary mt-1">
+                    <MapPin size={20} />
                   </div>
                   <div>
                     <h4 className="font-medium text-primary">Endereço</h4>
@@ -107,7 +107,7 @@ const ContactSection: React.FC = () => {
                 </p>
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                   <button className="w-full py-3 px-4 bg-secondary text-white rounded-lg flex items-center justify-center">
-                    <i className="fab fa-whatsapp mr-2 text-lg"></i> Iniciar conversa
+                    <MessageCircle size={18} className="mr-2" /> Iniciar conversa
                   </button>
                 </a>
               </div>
