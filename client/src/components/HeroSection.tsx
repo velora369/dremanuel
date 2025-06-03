@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { WHATSAPP_URL } from '@/lib/constants';
+import { WHATSAPP_MESSAGES, createWhatsAppURL } from '@/lib/constants';
 
 const HeroSection: React.FC = () => {
   return (
@@ -47,7 +47,7 @@ const HeroSection: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+            <a href={createWhatsAppURL(WHATSAPP_MESSAGES.CONSULTATION)} target="_blank" rel="noopener noreferrer">
               <Button 
                 variant="secondary" 
                 size="lg" 

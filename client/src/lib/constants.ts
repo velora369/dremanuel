@@ -1,5 +1,27 @@
 // Contact information
-export const WHATSAPP_URL = "https://api.whatsapp.com/send?1=pt_BR&phone=5593991674540";
+export const WHATSAPP_PHONE = "5593991674540";
+export const WHATSAPP_BASE_URL = "https://api.whatsapp.com/send";
+
+// WhatsApp Messages
+export const WHATSAPP_MESSAGES = {
+  CONSULTATION: "Olá! Tenho interesse em agendar uma consulta com o Dr. Emanuel Esposito.",
+  DOENCA_RENAL_CRONICA: "Olá! Gostaria de agendar uma consulta sobre doença renal crônica com o Dr. Emanuel Esposito.",
+  LITIASE_RENAL: "Olá! Tenho interesse em consulta para tratamento de pedras nos rins com o Dr. Emanuel Esposito.",
+  HIPERTENSAO: "Olá! Gostaria de agendar consulta para controle de hipertensão arterial com o Dr. Emanuel Esposito.",
+  INFECCAO_URINARIA: "Olá! Preciso de consulta para tratamento de infecção urinária com o Dr. Emanuel Esposito.",
+  NEFRITES: "Olá! Gostaria de agendar consulta sobre nefrites com o Dr. Emanuel Esposito.",
+  DIABETES_RENAL: "Olá! Tenho interesse em consulta para doença renal do diabetes com o Dr. Emanuel Esposito.",
+  CISTOS_RENAIS: "Olá! Gostaria de agendar consulta sobre cistos renais com o Dr. Emanuel Esposito.",
+  COURSE_POCUS: "Olá! Tenho interesse no curso de POCUS do Dr. Emanuel Esposito. Gostaria de mais informações.",
+  TECHNOLOGY_APPOINTMENT: "Olá! Tenho interesse em conhecer as tecnologias avançadas do consultório do Dr. Emanuel Esposito.",
+  GENERAL_INFO: "Olá! Gostaria de mais informações sobre os serviços do Dr. Emanuel Esposito."
+};
+
+// Helper function to create WhatsApp URL
+export const createWhatsAppURL = (message: string) => {
+  const encodedMessage = encodeURIComponent(message);
+  return `${WHATSAPP_BASE_URL}?phone=${WHATSAPP_PHONE}&text=${encodedMessage}`;
+};
 
 // Award information
 export const AWARDS = [

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { WHATSAPP_URL } from '@/lib/constants';
+import { WHATSAPP_MESSAGES, createWhatsAppURL } from '@/lib/constants';
 import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 
 const ContactSection: React.FC = () => {

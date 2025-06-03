@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
-import { WHATSAPP_URL } from '@/lib/constants';
+import { WHATSAPP_MESSAGES, createWhatsAppURL } from '@/lib/constants';
 import { Menu, X } from 'lucide-react';
 // Importando o logo diretamente como um módulo
 import logoImage from '../assets/logo-emanuel-novo.png';

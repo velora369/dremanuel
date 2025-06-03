@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { WHATSAPP_URL } from '@/lib/constants';
+import { WHATSAPP_MESSAGES, createWhatsAppURL } from '@/lib/constants';
 
 const FinalCTASection: React.FC = () => {
   return (

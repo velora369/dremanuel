@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { WHATSAPP_URL } from '@/lib/constants';
+import { WHATSAPP_MESSAGES, createWhatsAppURL } from '@/lib/constants';
 
 // Importar imagens do carrossel
 import doctorImage1 from '../assets/images/doctor/nova3topdr.webp';
