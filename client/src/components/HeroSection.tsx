@@ -47,7 +47,7 @@ const HeroSection: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <a href={createWhatsAppURL(WHATSAPP_MESSAGES.CONSULTATION)} target="_blank" rel="noopener noreferrer">
+            <a href={createWhatsAppURL(WHATSAPP_MESSAGES.GENERAL_INFO)} target="_blank" rel="noopener noreferrer">
               <Button 
                 variant="secondary" 
                 size="lg" 

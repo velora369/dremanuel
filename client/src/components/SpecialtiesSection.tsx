@@ -36,7 +36,7 @@ const SpecialtiesSection: React.FC = () => {
       'Doença renal do diabetes': WHATSAPP_MESSAGES.DIABETES_RENAL,
       'Cistos renais': WHATSAPP_MESSAGES.CISTOS_RENAIS
     };
-    return messageMap[title] || WHATSAPP_MESSAGES.CONSULTATION;
+    return messageMap[title] || WHATSAPP_MESSAGES.GENERAL_INFO;
   };
 
   const container = {

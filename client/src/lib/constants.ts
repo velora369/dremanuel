@@ -4,7 +4,11 @@ export const WHATSAPP_BASE_URL = "https://api.whatsapp.com/send";
 
 // WhatsApp Messages
 export const WHATSAPP_MESSAGES = {
-  CONSULTATION: "Olá! Tenho interesse em agendar uma consulta com o Dr. Emanuel Esposito.",
+  // Mensagens para tipos de consulta
+  CONSULTATION_PRESENCIAL: "Olá, tenho interesse em agendar uma consulta presencial com o Dr. Emanuel Esposito.",
+  CONSULTATION_TELEMEDICINA: "Olá, tenho interesse em agendar uma consulta online (telemedicina) com o Dr. Emanuel Esposito.",
+  
+  // Mensagens por especialidade
   DOENCA_RENAL_CRONICA: "Olá! Gostaria de agendar uma consulta sobre doença renal crônica com o Dr. Emanuel Esposito.",
   LITIASE_RENAL: "Olá! Tenho interesse em consulta para tratamento de pedras nos rins com o Dr. Emanuel Esposito.",
   HIPERTENSAO: "Olá! Gostaria de agendar consulta para controle de hipertensão arterial com o Dr. Emanuel Esposito.",
@@ -12,8 +16,15 @@ export const WHATSAPP_MESSAGES = {
   NEFRITES: "Olá! Gostaria de agendar consulta sobre nefrites com o Dr. Emanuel Esposito.",
   DIABETES_RENAL: "Olá! Tenho interesse em consulta para doença renal do diabetes com o Dr. Emanuel Esposito.",
   CISTOS_RENAIS: "Olá! Gostaria de agendar consulta sobre cistos renais com o Dr. Emanuel Esposito.",
+  
+  // Outras mensagens
   COURSE_POCUS: "Olá! Tenho interesse no curso de POCUS do Dr. Emanuel Esposito. Gostaria de mais informações.",
   TECHNOLOGY_APPOINTMENT: "Olá! Tenho interesse em conhecer as tecnologias avançadas do consultório do Dr. Emanuel Esposito.",
+  
+  // Mensagem para conversar com equipe
+  TEAM_CONSULTATION: "Olá, gostaria de saber qual é o melhor formato de atendimento para meu caso.",
+  
+  // Mensagem geral (fallback)
   GENERAL_INFO: "Olá! Gostaria de mais informações sobre os serviços do Dr. Emanuel Esposito."
 };
 

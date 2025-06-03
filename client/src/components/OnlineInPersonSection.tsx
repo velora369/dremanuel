@@ -60,7 +60,7 @@ const OnlineInPersonSection: React.FC = () => {
               Atendimento completo em Santarém, com exames e procedimentos realizados no mesmo local.
             </p>
             <div className="mt-auto pt-4">
-              <a href={createWhatsAppURL(WHATSAPP_MESSAGES.CONSULTATION)} target="_blank" rel="noopener noreferrer">
+              <a href={createWhatsAppURL(WHATSAPP_MESSAGES.CONSULTATION_PRESENCIAL)} target="_blank" rel="noopener noreferrer">
                 <Button variant="white" size="sm" className="btn-secondary inline-block w-48 whitespace-nowrap">
                   <i className="fab fa-whatsapp mr-2"></i> Agendar Presencial
                 </Button>
@@ -85,7 +85,7 @@ const OnlineInPersonSection: React.FC = () => {
               Consulta online com a mesma qualidade, de qualquer lugar do Brasil e com total privacidade. Acompanhamento especializado com laudos e orientações detalhadas.
             </p>
             <div className="mt-auto pt-4">
-              <a href={createWhatsAppURL(WHATSAPP_MESSAGES.CONSULTATION)} target="_blank" rel="noopener noreferrer">
+              <a href={createWhatsAppURL(WHATSAPP_MESSAGES.CONSULTATION_TELEMEDICINA)} target="_blank" rel="noopener noreferrer">
                 <Button variant="white" size="sm" className="btn-secondary inline-block w-48 whitespace-nowrap">
                   <i className="fab fa-whatsapp mr-2"></i> Agendar Telemedicina
                 </Button>
@@ -102,7 +102,7 @@ const OnlineInPersonSection: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <p className="text-lg font-montserrat mb-4">Não consegue decidir qual formato é melhor para você?</p>
-          <a href={createWhatsAppURL(WHATSAPP_MESSAGES.GENERAL_INFO)} target="_blank" rel="noopener noreferrer">
+          <a href={createWhatsAppURL(WHATSAPP_MESSAGES.TEAM_CONSULTATION)} target="_blank" rel="noopener noreferrer">
             <Button variant="white" className="btn-secondary inline-block">
               Converse com nossa equipe
             </Button>
