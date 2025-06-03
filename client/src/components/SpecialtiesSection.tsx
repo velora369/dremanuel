@@ -26,6 +26,19 @@ const SpecialtiesSection: React.FC = () => {
     return iconComponents[iconName] || <Network size={24} />;
   };
 
+  const getSpecialtyMessage = (title: string) => {
+    const messageMap: { [key: string]: string } = {
+      'Doença renal crônica': WHATSAPP_MESSAGES.DOENCA_RENAL_CRONICA,
+      'Litíase renal': WHATSAPP_MESSAGES.LITIASE_RENAL,
+      'Hipertensão arterial': WHATSAPP_MESSAGES.HIPERTENSAO,
+      'Infecção urinária': WHATSAPP_MESSAGES.INFECCAO_URINARIA,
+      'Nefrites': WHATSAPP_MESSAGES.NEFRITES,
+      'Doença renal do diabetes': WHATSAPP_MESSAGES.DIABETES_RENAL,
+      'Cistos renais': WHATSAPP_MESSAGES.CISTOS_RENAIS
+    };
+    return messageMap[title] || WHATSAPP_MESSAGES.CONSULTATION;
+  };
+
   const container = {
     hidden: { opacity: 0 },
     show: {
