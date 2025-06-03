@@ -105,7 +105,7 @@ const ContactSection: React.FC = () => {
                 <p className="text-primary/70 mb-4">
                   Agende sua consulta ou tire suas dúvidas através do nosso WhatsApp
                 </p>
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                <a href={createWhatsAppURL(WHATSAPP_MESSAGES.GENERAL_INFO)} target="_blank" rel="noopener noreferrer">
                   <button className="w-full py-3 px-4 bg-secondary text-white rounded-lg flex items-center justify-center">
                     <MessageCircle size={18} className="mr-2" /> Iniciar conversa
                   </button>

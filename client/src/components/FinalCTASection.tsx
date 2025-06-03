@@ -22,7 +22,7 @@ const FinalCTASection: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+            <a href={createWhatsAppURL(WHATSAPP_MESSAGES.CONSULTATION)} target="_blank" rel="noopener noreferrer">
               <Button variant="default" size="lg" className="btn-primary w-full sm:w-auto flex items-center justify-center">
                 <i className="fab fa-whatsapp mr-2 text-lg"></i> Agendar consulta
               </Button>

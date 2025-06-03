@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SPECIALTIES } from '@/lib/constants';
+import { SPECIALTIES, WHATSAPP_MESSAGES, createWhatsAppURL } from '@/lib/constants';
+import { Button } from '@/components/ui/button';
 import kidneyIcon from '../assets/icons/new-kidney-icon.webp';
 import { 
   Gem, 
