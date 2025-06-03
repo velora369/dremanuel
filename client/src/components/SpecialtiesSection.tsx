@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { SPECIALTIES, WHATSAPP_MESSAGES, createWhatsAppURL } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
 import kidneyIcon from '../assets/icons/new-kidney-icon.webp';
@@ -9,10 +9,18 @@ import {
   Bug, 
   ShieldAlert, 
   Syringe, 
-  Network 
+  Network,
+  ChevronDown,
+  ChevronUp
 } from 'lucide-react';
 
 const SpecialtiesSection: React.FC = () => {
+  const [expandedCard, setExpandedCard] = useState<number | null>(null);
+
+  const toggleCard = (index: number) => {
+    setExpandedCard(expandedCard === index ? null : index);
+  };
+
   const getSpecialtyIcon = (iconName: string) => {
     const iconComponents: { [key: string]: React.ReactNode } = {
       'kidney': <img src={kidneyIcon} alt="Doença renal crônica" className="w-6 h-6 object-contain" />,
@@ -83,21 +91,61 @@ const SpecialtiesSection: React.FC = () => {
           {SPECIALTIES.map((specialty, index) => (
             <motion.div 
               key={index}
-              className={`bg-white rounded-xl p-6 shadow-sm flex flex-col items-center text-center card-hover ${index === SPECIALTIES.length - 1 ? 'lg:col-start-2' : ''}`}
+              className={`bg-white rounded-xl p-6 shadow-sm flex flex-col text-center card-hover cursor-pointer transition-all duration-300 ${
+                index === SPECIALTIES.length - 1 ? 'lg:col-start-2' : ''
+              } ${expandedCard === index ? 'lg:col-span-2' : ''}`}
               variants={item}
               whileHover={{ 
                 y: -5, 
                 boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)',
                 transition: { duration: 0.3 } 
               }}
+              onClick={() => toggleCard(index)}
+              layout
             >
-              <div className="bg-secondary/20 p-3 rounded-full text-secondary mb-3 flex items-center justify-center">
-                {getSpecialtyIcon(specialty.icon)}
+              <div className="flex flex-col items-center">
+                <div className="bg-secondary/20 p-3 rounded-full text-secondary mb-3 flex items-center justify-center">
+                  {getSpecialtyIcon(specialty.icon)}
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center justify-center gap-2">
+                    <h3 className="font-montserrat font-semibold text-primary mb-1">{specialty.title}</h3>
+                    <motion.div
+                      animate={{ rotate: expandedCard === index ? 180 : 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="text-secondary"
+                    >
+                      <ChevronDown size={20} />
+                    </motion.div>
+                  </div>
+                  <p className="text-sm text-primary/70 mb-3">{specialty.description}</p>
+                </div>
               </div>
-              <div>
-                <h3 className="font-montserrat font-semibold text-primary mb-1">{specialty.title}</h3>
-                <p className="text-sm text-primary/70">{specialty.description}</p>
-              </div>
+
+              <AnimatePresence>
+                {expandedCard === index && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="border-t border-gray-200 pt-4 mt-4">
+                      <p className="text-sm text-primary/80 text-left leading-relaxed mb-4">
+                        {specialty.detailedDescription}
+                      </p>
+                      <div className="flex justify-center">
+                        <a href={createWhatsAppURL(getSpecialtyMessage(specialty.title))} target="_blank" rel="noopener noreferrer">
+                          <Button variant="default" size="sm" className="btn-primary">
+                            <i className="fab fa-whatsapp mr-2"></i> Agendar consulta
+                          </Button>
+                        </a>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </motion.div>
           ))}
         </motion.div>
