@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -53,18 +55,149 @@
   body {
     @apply bg-background text-foreground font-sans;
     font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f1f4f3 100%);
+    min-height: 100vh;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Space Grotesk', 'Montserrat', sans-serif;
+    font-weight: 600;
   }
 }
 
 @layer components {
-  .hero-gradient {
-    background: linear-gradient(135deg, rgba(35, 54, 43, 0.9) 0%, rgba(35, 54, 43, 0.8) 100%);
+  /* Glassmorphism Effects */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border-radius: 1.5rem;
   }
   
+  .glass-nav {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Modern Gradients */
+  .hero-gradient {
+    background: linear-gradient(135deg, 
+      rgba(123, 175, 150, 0.95) 0%, 
+      rgba(35, 54, 43, 0.9) 50%, 
+      rgba(123, 175, 150, 0.85) 100%);
+  }
+  
+  .modern-gradient {
+    background: linear-gradient(135deg, 
+      #ffffff 0%, 
+      #f8f9fa 25%, 
+      #ffffff 50%, 
+      #f1f4f3 75%, 
+      #ffffff 100%);
+  }
+  
+  .accent-gradient {
+    background: linear-gradient(135deg, 
+      rgba(123, 175, 150, 0.1) 0%, 
+      rgba(216, 210, 192, 0.15) 100%);
+  }
+
+  /* Interactive Cards */
+  .modern-card {
+    @apply relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .modern-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+      rgba(123, 175, 150, 0.02) 0%, 
+      rgba(216, 210, 192, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .modern-card:hover {
+    @apply shadow-xl border-secondary/20;
+    transform: translateY(-4px);
+  }
+  
+  .modern-card:hover::before {
+    opacity: 1;
+  }
+
+  /* 3D Icon Containers */
+  .icon-3d {
+    @apply relative flex items-center justify-center rounded-2xl;
+    background: linear-gradient(135deg, 
+      rgba(123, 175, 150, 0.1) 0%, 
+      rgba(123, 175, 150, 0.05) 100%);
+    box-shadow: 
+      0 4px 20px rgba(123, 175, 150, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3),
+      inset 0 -1px 0 rgba(123, 175, 150, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .icon-3d:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 
+      0 8px 25px rgba(123, 175, 150, 0.25),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4),
+      inset 0 -1px 0 rgba(123, 175, 150, 0.15);
+  }
+
+  /* Modern Buttons */
+  .btn-modern {
+    @apply relative overflow-hidden rounded-xl px-8 py-3 font-medium transition-all duration-300;
+    background: linear-gradient(135deg, #7BAF96 0%, #6A9B82 100%);
+    box-shadow: 0 4px 15px rgba(123, 175, 150, 0.3);
+  }
+  
+  .btn-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+  
+  .btn-modern:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(123, 175, 150, 0.4);
+  }
+  
+  .btn-modern:hover::before {
+    left: 100%;
+  }
+
+  /* Section Backgrounds */
+  .section-pattern {
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(123, 175, 150, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(216, 210, 192, 0.05) 0%, transparent 50%);
+  }
+
+  /* Text Gradients */
+  .text-gradient {
+    background: linear-gradient(135deg, #23362B 0%, #7BAF96 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Legacy styles maintained for compatibility */
   .card-hover {
     @apply transition-all duration-300 ease-in-out;
   }
@@ -95,5 +228,41 @@
   
   .btn-secondary:hover {
     @apply transform -translate-y-0.5 shadow-md;
+  }
+
+  /* Microinteractions */
+  .micro-bounce:hover {
+    animation: microBounce 0.6s ease;
+  }
+  
+  @keyframes microBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+  }
+
+  /* Animations */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s ease forwards;
+  }
+  
+  .fade-up-delay-1 {
+    animation-delay: 0.1s;
+  }
+  
+  .fade-up-delay-2 {
+    animation-delay: 0.2s;
+  }
+  
+  .fade-up-delay-3 {
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
