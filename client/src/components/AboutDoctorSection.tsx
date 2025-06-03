@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { WHATSAPP_URL } from '@/lib/constants';
+import { Calendar, GraduationCap, ChevronLeft, ChevronRight, Award, Users, Microscope, HeartHandshake } from 'lucide-react';
+import Icon3D from '@/components/ui/icon-3d';
+import CustomEmoji from '@/components/ui/custom-emoji';
 
 // Importar imagens do carrossel
 import doctorImage1 from '../assets/images/doctor/nova3topdr.webp';
