@@ -27,6 +27,12 @@ const CompleteCareSection: React.FC = () => {
       title: "Suporte via WhatsApp",
       description: "Acesso direto à equipe para dúvidas e acompanhamento",
       useCustomIcon: false
+    },
+    {
+      icon: "fa-microscope",
+      title: "Análise Cristalográfica do Cálculo",
+      description: "Identificação precisa da composição de cálculos renais para direcionar o tratamento e prevenção.",
+      useCustomIcon: false
     }
   ];
 
@@ -65,7 +71,7 @@ const CompleteCareSection: React.FC = () => {
         </motion.div>
         
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-6xl mx-auto"
           variants={container}
           initial="hidden"
           whileInView="show"

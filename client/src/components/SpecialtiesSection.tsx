@@ -44,7 +44,8 @@ const SpecialtiesSection: React.FC = () => {
       'Infecção urinária': WHATSAPP_MESSAGES.INFECCAO_URINARIA,
       'Nefrites': WHATSAPP_MESSAGES.NEFRITES,
       'Doença renal do diabetes': WHATSAPP_MESSAGES.DIABETES_RENAL,
-      'Cistos renais': WHATSAPP_MESSAGES.CISTOS_RENAIS
+      'Cistos renais': WHATSAPP_MESSAGES.CISTOS_RENAIS,
+      'Transplante Renal': WHATSAPP_MESSAGES.TRANSPLANTE_RENAL
     };
     return messageMap[title] || WHATSAPP_MESSAGES.GENERAL_INFO;
   };

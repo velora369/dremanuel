@@ -22,6 +22,7 @@ export const WHATSAPP_MESSAGES = {
   NEFRITES: "Olá! Gostaria de agendar consulta sobre nefrites com o Dr. Emanuel Esposito.",
   DIABETES_RENAL: "Olá! Tenho interesse em consulta para doença renal do diabetes com o Dr. Emanuel Esposito.",
   CISTOS_RENAIS: "Olá! Gostaria de agendar consulta sobre cistos renais com o Dr. Emanuel Esposito.",
+  TRANSPLANTE_RENAL: "Olá! Gostaria de agendar consulta sobre transplante renal com o Dr. Emanuel Esposito.",
   
   // Outras mensagens
   COURSE_POCUS: "Olá! Tenho interesse no curso de POCUS do Dr. Emanuel Esposito. Gostaria de mais informações.",
