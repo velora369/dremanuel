@@ -27,12 +27,6 @@ const CompleteCareSection: React.FC = () => {
       title: "Suporte via WhatsApp",
       description: "Acesso direto à equipe para dúvidas e acompanhamento",
       useCustomIcon: false
-    },
-    {
-      icon: "fa-microscope",
-      title: "Análise Cristalográfica do Cálculo",
-      description: "Identificação precisa da composição de cálculos renais para direcionar o tratamento e prevenção.",
-      useCustomIcon: false
     }
   ];
 

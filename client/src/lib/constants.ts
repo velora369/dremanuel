@@ -140,6 +140,12 @@ export const SPECIALTIES = [
     title: "Transplante Renal",
     description: "Avaliação pré-transplante, acompanhamento pós-operatório e manejo de imunossupressão.",
     detailedDescription: "O transplante renal é a melhor opção de tratamento para pacientes com doença renal terminal. Oferecemos avaliação completa pré-transplante, incluindo exames de compatibilidade e preparação do paciente. Após o transplante, realizamos acompanhamento especializado com ajuste da imunossupressão, prevenção de rejeição e manejo de complicações, garantindo a melhor sobrevida do enxerto."
+  },
+  {
+    icon: "microscope",
+    title: "Análise Cristalográfica do Cálculo",
+    description: "Identificação precisa da composição de cálculos renais",
+    detailedDescription: "A análise cristalográfica é um exame laboratorial especializado que identifica com precisão a composição química dos cálculos renais. Este conhecimento é fundamental para direcionar o tratamento específico e desenvolver estratégias de prevenção personalizadas, incluindo orientações dietéticas adequadas e medicações preventivas quando necessário."
   }
 ];
 
