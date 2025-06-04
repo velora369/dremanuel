@@ -222,16 +222,16 @@ const SpecialtiesSection: React.FC = () => {
             })}
           </div>
 
-          {/* Terceira linha - 3 cards restantes */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Terceira linha - 2 cards lado a lado */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {SPECIALTIES.slice(6).map((specialty, index) => {
               const actualIndex = index + 6;
               return (
                 <motion.div 
                   key={actualIndex}
                   className={`bg-white rounded-xl p-6 shadow-sm flex flex-col text-center card-hover cursor-pointer transition-all duration-300 ${
-                    expandedCard === actualIndex ? 'md:col-span-3' : ''
-                  } ${actualIndex === 8 ? 'md:col-start-2' : ''}`}
+                    expandedCard === actualIndex ? 'md:col-span-2' : ''
+                  }`}
                   variants={item}
                   whileHover={{ 
                     y: -5, 
