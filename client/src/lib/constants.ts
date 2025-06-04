@@ -130,6 +130,12 @@ export const SPECIALTIES = [
     title: "Cistos renais",
     description: "Diagnóstico, acompanhamento e tratamento de cistos renais",
     detailedDescription: "Os cistos renais podem ser simples (benignos) ou complexos (requerendo investigação adicional). A avaliação inclui ultrassonografia, tomografia ou ressonância magnética para caracterização adequada. Cistos simples geralmente apenas necessitam acompanhamento, enquanto cistos complexos podem requerer biópsia ou tratamento cirúrgico dependendo das características encontradas."
+  },
+  {
+    icon: "heart-handshake",
+    title: "Transplante Renal",
+    description: "Avaliação pré-transplante, acompanhamento pós-operatório e manejo de imunossupressão.",
+    detailedDescription: "O transplante renal é a melhor opção de tratamento para pacientes com doença renal terminal. Oferecemos avaliação completa pré-transplante, incluindo exames de compatibilidade e preparação do paciente. Após o transplante, realizamos acompanhamento especializado com ajuste da imunossupressão, prevenção de rejeição e manejo de complicações, garantindo a melhor sobrevida do enxerto."
   }
 ];
 

@@ -1,0 +1,44 @@
+**Objetivo:**
+
+Implementar três atualizações específicas no conteúdo do site, conforme solicitado pelo Dr. Emanuel Esposito, garantindo a consistência com o design e a estrutura existentes.
+
+**Instruções Detalhadas:**
+
+Por favor, modifique os arquivos HTML, CSS e, se necessário, JavaScript do projeto para realizar as seguintes alterações:
+
+**1. Adicionar Nova Seção: Consultoria em Hemodiálise e Transplante Renal**
+
+*   **Localização:** Insira esta nova seção **imediatamente após** a seção existente que contém o título "Curso Online: POCUS aplicado à clínica médica" e **imediatamente antes** da seção que contém o título "Histórias que provam a diferença." (seção de depoimentos).
+*   **Estrutura e Estilo:** A nova seção deve seguir o mesmo padrão visual e estrutural das outras seções principais do site (como a seção do curso POCUS ou a seção "Tecnologia a serviço da sua saúde renal"). Utilize títulos, parágrafos e, se possível, ícones ou elementos visuais que se alinhem com a identidade visual do site.
+*   **Conteúdo:**
+    *   **Título Principal da Seção:** `Consultoria Especializada: Implementação de Serviços de Hemodiálise e Transplante Renal`
+    *   **Texto Principal:** `Com vasta experiência na estruturação e gestão de serviços de nefrologia de alta complexidade, o Dr. Emanuel Esposito oferece consultoria especializada para a implementação de unidades de hemodiálise e programas de transplante renal em novas localidades. Auxiliamos hospitais e clínicas em todo o processo, desde o planejamento e licenciamento até o treinamento de equipes e início das operações, replicando o sucesso alcançado na transformação da saúde renal no Baixo Amazonas. Leve expertise e inovação para a sua região.`
+    *   *Observação:* Adapte a formatação (negrito, quebras de linha, etc.) para melhor legibilidade e integração visual.
+
+**2. Adicionar Novo Card: Transplante Renal (Condições Atendidas)**
+
+*   **Localização:** Encontre a seção que contém o título "Principais condições atendidas em consultório". Dentro desta seção, adicione um novo card.
+*   **Estrutura e Estilo:** O novo card deve ter **exatamente a mesma estrutura e estilo visual** dos cards já existentes nessa seção (como "Doença renal crônica", "Litíase renal", "Hipertensão arterial", etc.). Isso inclui o layout, o ícone (se houver um padrão, tente encontrar um apropriado ou reutilize um genérico se necessário), a formatação do título e do texto explicativo.
+*   **Conteúdo do Novo Card:**
+    *   **Título:** `Transplante Renal`
+    *   **Texto Explicativo:** `Avaliação pré-transplante, acompanhamento pós-operatório e manejo de imunossupressão.`
+*   **Posicionamento:** Insira este card de forma lógica junto aos outros, mantendo a organização visual da grade de cards.
+
+**3. Adicionar Novo Card: Análise Cristalográfica (Diagnóstico/Tecnologia)**
+
+*   **Localização:** Encontre a seção que contém o título "Diagnóstico, tecnologia e suporte completo num só lugar". Dentro desta seção, adicione um novo card.
+*   **Estrutura e Estilo:** O novo card deve ter **exatamente a mesma estrutura e estilo visual** dos cards já existentes nessa seção (como "MAPA", "Ultrassonografia", "Enfermeira Especializada", "Suporte via WhatsApp"). Mantenha a consistência de layout, ícones (encontre um apropriado, talvez relacionado a laboratório, análise ou pedras/cristais) e formatação.
+*   **Conteúdo do Novo Card:**
+    *   **Título:** `Análise Cristalográfica do Cálculo`
+    *   **Texto Explicativo:** `Identificação precisa da composição de cálculos renais para direcionar o tratamento e prevenção.`
+*   **Posicionamento:** Insira este card de forma lógica junto aos outros, mantendo a organização visual da grade de cards.
+
+**Observações Gerais:**
+
+*   Certifique-se de que todas as alterações sejam responsivas e funcionem bem em diferentes tamanhos de tela (desktop, tablet, mobile).
+*   Mantenha a consistência tipográfica, de cores e espaçamentos com o restante do site.
+*   Revise o código para garantir que não haja erros de sintaxe ou problemas de renderização após as modificações.
+
+**Relatório de Conclusão:**
+
+Após implementar as alterações, por favor, confirme que todas as três solicitações foram concluídas com sucesso e que a consistência visual foi mantida.

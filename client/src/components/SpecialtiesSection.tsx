@@ -11,7 +11,8 @@ import {
   Syringe, 
   Network,
   ChevronDown,
-  ChevronUp
+  ChevronUp,
+  HeartHandshake
 } from 'lucide-react';
 
 const SpecialtiesSection: React.FC = () => {
@@ -29,7 +30,8 @@ const SpecialtiesSection: React.FC = () => {
       'bug': <Bug size={24} />,
       'shield-alert': <ShieldAlert size={24} />,
       'syringe': <Syringe size={24} />,
-      'network': <Network size={24} />
+      'network': <Network size={24} />,
+      'heart-handshake': <HeartHandshake size={24} />
     };
     return iconComponents[iconName] || <Network size={24} />;
   };

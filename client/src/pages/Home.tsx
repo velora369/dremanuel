@@ -9,6 +9,7 @@ import AboutDoctorSection from '@/components/AboutDoctorSection';
 import SpecialtiesSection from '@/components/SpecialtiesSection';
 import TechnologySection from '@/components/TechnologySection';
 import CourseSection from '@/components/CourseSection';
+import ConsultoriaSection from '@/components/ConsultoriaSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import MediaCoverageSection from '@/components/MediaCoverageSection';
 import PodcastsSection from '@/components/PodcastsSection';
@@ -34,6 +35,7 @@ const Home: React.FC = () => {
         <SpecialtiesSection />
         <TechnologySection />
         <CourseSection />
+        <ConsultoriaSection />
         <TestimonialsSection />
         <MediaCoverageSection />
         <PodcastsSection />
