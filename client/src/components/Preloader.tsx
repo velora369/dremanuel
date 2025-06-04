@@ -42,106 +42,50 @@ const Preloader: React.FC<PreloaderProps> = ({ onLoadingComplete }) => {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="fixed inset-0 z-[9999] bg-gradient-to-br from-[#F8F7F4] to-white flex flex-col items-center justify-center"
+          className="fixed inset-0 z-[9999] bg-white flex flex-col items-center justify-center"
         >
-          {/* Logo Section */}
+          {/* Logo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="mb-12"
+            className="mb-16"
           >
-            <div className="text-center">
-              <div className="mb-4 flex justify-center">
-                <img 
-                  src={logoImage} 
-                  alt="Logo Dr. Emanuel Esposito" 
-                  className="h-24 w-auto object-contain"
-                />
-              </div>
-              <div className="mb-4">
-                <h1 className="text-4xl md:text-5xl font-bold text-[#23362B] font-montserrat">
-                  Dr. Emanuel Esposito
-                </h1>
-              </div>
-              <motion.p
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.5 }}
-                className="text-lg text-[#7BAF96] font-medium"
-              >
-                Nefrologia & Medicina Interna
-              </motion.p>
-            </div>
+            <img 
+              src={logoImage} 
+              alt="Logo Dr. Emanuel Esposito" 
+              className="h-20 w-auto object-contain"
+            />
           </motion.div>
 
-          {/* Loading Bar */}
+          {/* Progress Bar */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
             className="w-80 max-w-[90vw]"
           >
-            {/* Progress Bar Container */}
-            <div className="relative">
-              <div className="w-full h-2 bg-[#D8D2C0]/50 rounded-full overflow-hidden shadow-inner">
-                <motion.div
-                  className="h-full bg-gradient-to-r from-[#7BAF96] to-[#23362B] rounded-full"
-                  initial={{ width: "0%" }}
-                  animate={{ width: `${progress}%` }}
-                  transition={{ ease: "easeOut" }}
-                />
-              </div>
-              
-              {/* Animated glow effect */}
+            <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
               <motion.div
-                className="absolute top-0 left-0 h-2 w-16 bg-gradient-to-r from-transparent via-white/40 to-transparent rounded-full"
-                animate={{ 
-                  x: [`-64px`, `${(progress / 100) * 320}px`],
-                }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
+                className="h-full bg-[#7BAF96] rounded-full"
+                initial={{ width: "0%" }}
+                animate={{ width: `${progress}%` }}
+                transition={{ ease: "easeOut" }}
               />
             </div>
-
-            {/* Progress Percentage */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8 }}
-              className="text-center mt-4"
-            >
-              <span className="text-[#23362B] font-medium text-sm">
-                {Math.round(progress)}%
-              </span>
-            </motion.div>
           </motion.div>
 
           {/* Loading Text */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1 }}
-            className="mt-8 text-center"
+            transition={{ delay: 0.5 }}
+            className="mt-8"
           >
-            <motion.p
-              animate={{ 
-                opacity: [0.5, 1, 0.5],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              className="text-[#7BAF96] text-sm font-medium"
-            >
-              Carregando experiência médica especializada...
-            </motion.p>
+            <p className="text-[#7BAF96] text-sm font-medium">
+              Carregando experiência
+            </p>
           </motion.div>
-
 
         </motion.div>
       )}
