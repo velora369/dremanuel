@@ -85,209 +85,72 @@ const SpecialtiesSection: React.FC = () => {
         </motion.div>
         
         <motion.div 
-          className="max-w-6xl mx-auto"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto"
           variants={container}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
         >
-          {/* Primeira linha - 3 cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-            {SPECIALTIES.slice(0, 3).map((specialty, index) => (
-              <motion.div 
-                key={index}
-                className={`bg-white rounded-xl p-6 shadow-sm flex flex-col text-center card-hover cursor-pointer transition-all duration-300 ${
-                  expandedCard === index ? 'md:col-span-3' : ''
-                }`}
-                variants={item}
-                whileHover={{ 
-                  y: -5, 
-                  boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)',
-                  transition: { duration: 0.3 } 
-                }}
-                onClick={() => toggleCard(index)}
-                layout
-              >
-                <div className="flex flex-col items-center">
-                  <div className="bg-secondary/20 p-3 rounded-full text-secondary mb-3 flex items-center justify-center">
-                    {getSpecialtyIcon(specialty.icon)}
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-center gap-2">
-                      <h3 className="font-montserrat font-semibold text-primary mb-1">{specialty.title}</h3>
-                      <motion.div
-                        animate={{ rotate: expandedCard === index ? 180 : 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="text-secondary"
-                      >
-                        <ChevronDown size={20} />
-                      </motion.div>
-                    </div>
-                    <p className="text-sm text-primary/70 mb-3">{specialty.description}</p>
-                  </div>
+          {SPECIALTIES.map((specialty, index) => (
+            <motion.div 
+              key={index}
+              className={`bg-white rounded-xl p-6 shadow-sm flex flex-col text-center card-hover cursor-pointer transition-all duration-300 ${
+                expandedCard === index ? 'lg:col-span-3' : ''
+              }`}
+              variants={item}
+              whileHover={{ 
+                y: -5, 
+                boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)',
+                transition: { duration: 0.3 } 
+              }}
+              onClick={() => toggleCard(index)}
+              layout
+            >
+              <div className="flex flex-col items-center">
+                <div className="bg-secondary/20 p-3 rounded-full text-secondary mb-3 flex items-center justify-center">
+                  {getSpecialtyIcon(specialty.icon)}
                 </div>
-
-                <AnimatePresence>
-                  {expandedCard === index && (
+                <div className="flex-1">
+                  <div className="flex items-center justify-center gap-2">
+                    <h3 className="font-montserrat font-semibold text-primary mb-1">{specialty.title}</h3>
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      exit={{ opacity: 0, height: 0 }}
+                      animate={{ rotate: expandedCard === index ? 180 : 0 }}
                       transition={{ duration: 0.3 }}
-                      className="overflow-hidden"
+                      className="text-secondary"
                     >
-                      <div className="border-t border-gray-200 pt-4 mt-4">
-                        <p className="text-sm text-primary/80 text-left leading-relaxed mb-4">
-                          {specialty.detailedDescription}
-                        </p>
-                        <div className="flex justify-center">
-                          <a href={createWhatsAppURL(getSpecialtyMessage(specialty.title))} target="_blank" rel="noopener noreferrer">
-                            <Button variant="default" size="sm" className="btn-primary">
-                              <i className="fab fa-whatsapp mr-2"></i> Agendar consulta
-                            </Button>
-                          </a>
-                        </div>
-                      </div>
+                      <ChevronDown size={20} />
                     </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Segunda linha - 3 cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-            {SPECIALTIES.slice(3, 6).map((specialty, index) => {
-              const actualIndex = index + 3;
-              return (
-                <motion.div 
-                  key={actualIndex}
-                  className={`bg-white rounded-xl p-6 shadow-sm flex flex-col text-center card-hover cursor-pointer transition-all duration-300 ${
-                    expandedCard === actualIndex ? 'md:col-span-3' : ''
-                  }`}
-                  variants={item}
-                  whileHover={{ 
-                    y: -5, 
-                    boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)',
-                    transition: { duration: 0.3 } 
-                  }}
-                  onClick={() => toggleCard(actualIndex)}
-                  layout
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="bg-secondary/20 p-3 rounded-full text-secondary mb-3 flex items-center justify-center">
-                      {getSpecialtyIcon(specialty.icon)}
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center justify-center gap-2">
-                        <h3 className="font-montserrat font-semibold text-primary mb-1">{specialty.title}</h3>
-                        <motion.div
-                          animate={{ rotate: expandedCard === actualIndex ? 180 : 0 }}
-                          transition={{ duration: 0.3 }}
-                          className="text-secondary"
-                        >
-                          <ChevronDown size={20} />
-                        </motion.div>
-                      </div>
-                      <p className="text-sm text-primary/70 mb-3">{specialty.description}</p>
-                    </div>
                   </div>
+                  <p className="text-sm text-primary/70 mb-3">{specialty.description}</p>
+                </div>
+              </div>
 
-                  <AnimatePresence>
-                    {expandedCard === actualIndex && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="overflow-hidden"
-                      >
-                        <div className="border-t border-gray-200 pt-4 mt-4">
-                          <p className="text-sm text-primary/80 text-left leading-relaxed mb-4">
-                            {specialty.detailedDescription}
-                          </p>
-                          <div className="flex justify-center">
-                            <a href={createWhatsAppURL(getSpecialtyMessage(specialty.title))} target="_blank" rel="noopener noreferrer">
-                              <Button variant="default" size="sm" className="btn-primary">
-                                <i className="fab fa-whatsapp mr-2"></i> Agendar consulta
-                              </Button>
-                            </a>
-                          </div>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </motion.div>
-              );
-            })}
-          </div>
-
-          {/* Terceira linha - 3 cards restantes */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {SPECIALTIES.slice(6).map((specialty, index) => {
-              const actualIndex = index + 6;
-              return (
-                <motion.div 
-                  key={actualIndex}
-                  className={`bg-white rounded-xl p-6 shadow-sm flex flex-col text-center card-hover cursor-pointer transition-all duration-300 ${
-                    expandedCard === actualIndex ? 'md:col-span-3' : ''
-                  } ${actualIndex === 8 ? 'md:col-start-2' : ''}`}
-                  variants={item}
-                  whileHover={{ 
-                    y: -5, 
-                    boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)',
-                    transition: { duration: 0.3 } 
-                  }}
-                  onClick={() => toggleCard(actualIndex)}
-                  layout
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="bg-secondary/20 p-3 rounded-full text-secondary mb-3 flex items-center justify-center">
-                      {getSpecialtyIcon(specialty.icon)}
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center justify-center gap-2">
-                        <h3 className="font-montserrat font-semibold text-primary mb-1">{specialty.title}</h3>
-                        <motion.div
-                          animate={{ rotate: expandedCard === actualIndex ? 180 : 0 }}
-                          transition={{ duration: 0.3 }}
-                          className="text-secondary"
-                        >
-                          <ChevronDown size={20} />
-                        </motion.div>
+              <AnimatePresence>
+                {expandedCard === index && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="border-t border-gray-200 pt-4 mt-4">
+                      <p className="text-sm text-primary/80 text-left leading-relaxed mb-4">
+                        {specialty.detailedDescription}
+                      </p>
+                      <div className="flex justify-center">
+                        <a href={createWhatsAppURL(getSpecialtyMessage(specialty.title))} target="_blank" rel="noopener noreferrer">
+                          <Button variant="default" size="sm" className="btn-primary">
+                            <i className="fab fa-whatsapp mr-2"></i> Agendar consulta
+                          </Button>
+                        </a>
                       </div>
-                      <p className="text-sm text-primary/70 mb-3">{specialty.description}</p>
                     </div>
-                  </div>
-
-                  <AnimatePresence>
-                    {expandedCard === actualIndex && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="overflow-hidden"
-                      >
-                        <div className="border-t border-gray-200 pt-4 mt-4">
-                          <p className="text-sm text-primary/80 text-left leading-relaxed mb-4">
-                            {specialty.detailedDescription}
-                          </p>
-                          <div className="flex justify-center">
-                            <a href={createWhatsAppURL(getSpecialtyMessage(specialty.title))} target="_blank" rel="noopener noreferrer">
-                              <Button variant="default" size="sm" className="btn-primary">
-                                <i className="fab fa-whatsapp mr-2"></i> Agendar consulta
-                              </Button>
-                            </a>
-                          </div>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </motion.div>
-              );
-            })}
-          </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>
