@@ -100,10 +100,10 @@ export const SPECIALTIES = [
     detailedDescription: "A doença renal crônica é uma condição progressiva que afeta a capacidade dos rins de filtrar adequadamente o sangue. O diagnóstico precoce é fundamental para retardar sua progressão e evitar a necessidade de diálise ou transplante. O tratamento inclui controle rigoroso da pressão arterial, diabetes, uso de medicações específicas e acompanhamento nutricional especializado."
   },
   {
-    icon: "gem",
-    title: "Litíase renal",
-    description: "Tratamento e prevenção de pedras nos rins",
-    detailedDescription: "As pedras nos rins (cálculos renais) são formações sólidas que se desenvolvem quando substâncias como cálcio, oxalato e ácido úrico se concentram na urina. O tratamento varia desde mudanças dietéticas e aumento da ingestão de líquidos até procedimentos minimamente invasivos como litotripsia. A prevenção é fundamental através de orientação nutricional personalizada."
+    icon: "syringe",
+    title: "Doença renal do diabetes",
+    description: "Cuidado especializado da nefropatia diabética",
+    detailedDescription: "A nefropatia diabética é uma complicação comum do diabetes que afeta os rins. O controle rigoroso da glicemia e pressão arterial, associado ao uso de medicações específicas como inibidores da ECA ou bloqueadores do receptor de angiotensina, pode prevenir ou retardar significativamente a progressão para insuficiência renal terminal."
   },
   {
     icon: "heart-pulse",
@@ -112,22 +112,10 @@ export const SPECIALTIES = [
     detailedDescription: "A hipertensão arterial é uma das principais causas de doença renal. O controle adequado da pressão arterial é essencial para proteger os rins e o coração. Utilizamos monitoramento ambulatorial da pressão arterial (MAPA) para avaliação precisa e ajuste personalizado das medicações, garantindo controle otimizado 24 horas por dia."
   },
   {
-    icon: "bug",
-    title: "Infecção urinária",
-    description: "Tratamento de infecções complexas e recorrentes",
-    detailedDescription: "Infecções urinárias de repetição ou complicadas requerem investigação especializada para identificar fatores predisponentes. O tratamento vai além dos antibióticos, incluindo correção de alterações anatômicas, orientações preventivas e, quando necessário, profilaxia específica. Casos complexos podem estar relacionados a problemas estruturais do trato urinário."
-  },
-  {
     icon: "shield-alert",
     title: "Nefrites",
     description: "Diagnóstico e tratamento de inflamações renais",
     detailedDescription: "As nefrites são inflamações dos glomérulos renais que podem ser causadas por doenças autoimunes, infecções ou outras condições sistêmicas. O diagnóstico precoce através de exames especializados e, quando necessário, biópsia renal, permite tratamento direcionado com imunossupressores ou outras terapias específicas para preservar a função renal."
-  },
-  {
-    icon: "syringe",
-    title: "Doença renal do diabetes",
-    description: "Cuidado especializado da nefropatia diabética",
-    detailedDescription: "A nefropatia diabética é uma complicação comum do diabetes que afeta os rins. O controle rigoroso da glicemia e pressão arterial, associado ao uso de medicações específicas como inibidores da ECA ou bloqueadores do receptor de angiotensina, pode prevenir ou retardar significativamente a progressão para insuficiência renal terminal."
   },
   {
     icon: "network",
@@ -136,16 +124,28 @@ export const SPECIALTIES = [
     detailedDescription: "Os cistos renais podem ser simples (benignos) ou complexos (requerendo investigação adicional). A avaliação inclui ultrassonografia, tomografia ou ressonância magnética para caracterização adequada. Cistos simples geralmente apenas necessitam acompanhamento, enquanto cistos complexos podem requerer biópsia ou tratamento cirúrgico dependendo das características encontradas."
   },
   {
-    icon: "heart-handshake",
-    title: "Transplante Renal",
-    description: "Avaliação pré-transplante, acompanhamento pós-operatório e manejo de imunossupressão.",
-    detailedDescription: "O transplante renal é a melhor opção de tratamento para pacientes com doença renal terminal. Oferecemos avaliação completa pré-transplante, incluindo exames de compatibilidade e preparação do paciente. Após o transplante, realizamos acompanhamento especializado com ajuste da imunossupressão, prevenção de rejeição e manejo de complicações, garantindo a melhor sobrevida do enxerto."
+    icon: "bug",
+    title: "Infecção urinária",
+    description: "Tratamento de infecções complexas e recorrentes",
+    detailedDescription: "Infecções urinárias de repetição ou complicadas requerem investigação especializada para identificar fatores predisponentes. O tratamento vai além dos antibióticos, incluindo correção de alterações anatômicas, orientações preventivas e, quando necessário, profilaxia específica. Casos complexos podem estar relacionados a problemas estruturais do trato urinário."
+  },
+  {
+    icon: "gem",
+    title: "Litíase renal",
+    description: "Tratamento e prevenção de pedras nos rins",
+    detailedDescription: "As pedras nos rins (cálculos renais) são formações sólidas que se desenvolvem quando substâncias como cálcio, oxalato e ácido úrico se concentram na urina. O tratamento varia desde mudanças dietéticas e aumento da ingestão de líquidos até procedimentos minimamente invasivos como litotripsia. A prevenção é fundamental através de orientação nutricional personalizada."
   },
   {
     icon: "microscope",
     title: "Análise Cristalográfica do Cálculo",
     description: "Identificação precisa da composição de cálculos renais",
     detailedDescription: "A análise cristalográfica é um exame laboratorial especializado que identifica com precisão a composição química dos cálculos renais. Este conhecimento é fundamental para direcionar o tratamento específico e desenvolver estratégias de prevenção personalizadas, incluindo orientações dietéticas adequadas e medicações preventivas quando necessário."
+  },
+  {
+    icon: "heart-handshake",
+    title: "Transplante Renal",
+    description: "Avaliação pré-transplante, acompanhamento pós-operatório e manejo de imunossupressão.",
+    detailedDescription: "O transplante renal é a melhor opção de tratamento para pacientes com doença renal terminal. Oferecemos avaliação completa pré-transplante, incluindo exames de compatibilidade e preparação do paciente. Após o transplante, realizamos acompanhamento especializado com ajuste da imunossupressão, prevenção de rejeição e manejo de complicações, garantindo a melhor sobrevida do enxerto."
   }
 ];
 
