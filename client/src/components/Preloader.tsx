@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import logoImage from '../assets/logo-emanuel-novo.png';
 
 interface PreloaderProps {
   onLoadingComplete: () => void;
@@ -51,21 +52,18 @@ const Preloader: React.FC<PreloaderProps> = ({ onLoadingComplete }) => {
             className="mb-12"
           >
             <div className="text-center">
-              <motion.div
-                animate={{ 
-                  scale: [1, 1.05, 1],
-                }}
-                transition={{ 
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-                className="mb-4"
-              >
+              <div className="mb-4 flex justify-center">
+                <img 
+                  src={logoImage} 
+                  alt="Logo Dr. Emanuel Esposito" 
+                  className="h-24 w-auto object-contain"
+                />
+              </div>
+              <div className="mb-4">
                 <h1 className="text-4xl md:text-5xl font-bold text-[#23362B] font-montserrat">
                   Dr. Emanuel Esposito
                 </h1>
-              </motion.div>
+              </div>
               <motion.p
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -144,31 +142,7 @@ const Preloader: React.FC<PreloaderProps> = ({ onLoadingComplete }) => {
             </motion.p>
           </motion.div>
 
-          {/* Floating Medical Icons */}
-          <div className="absolute inset-0 pointer-events-none overflow-hidden">
-            {[...Array(6)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute text-[#D8D2C0]/30 text-2xl"
-                style={{
-                  left: `${20 + (i * 15)}%`,
-                  top: `${30 + (i % 2) * 40}%`,
-                }}
-                animate={{
-                  y: [-10, 10, -10],
-                  opacity: [0.3, 0.6, 0.3],
-                }}
-                transition={{
-                  duration: 3 + (i * 0.5),
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: i * 0.5,
-                }}
-              >
-                {i % 3 === 0 ? '🩺' : i % 3 === 1 ? '🫀' : '🧬'}
-              </motion.div>
-            ))}
-          </div>
+
         </motion.div>
       )}
     </AnimatePresence>
