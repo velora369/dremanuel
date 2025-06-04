@@ -31,6 +31,9 @@ export const WHATSAPP_MESSAGES = {
   // Mensagem para conversar com equipe
   TEAM_CONSULTATION: "Olá, gostaria de saber qual é o melhor formato de atendimento para meu caso.",
   
+  // Mensagem para consultoria especializada
+  CONSULTORIA_ESPECIALIZADA: "Olá, tenho interesse em uma consultoria personalizada.",
+  
   // Mensagem geral (fallback)
   GENERAL_INFO: "Olá! Gostaria de mais informações sobre os serviços do Dr. Emanuel Esposito."
 };

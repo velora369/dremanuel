@@ -114,6 +114,7 @@ const Header: React.FC = () => {
                   { label: 'Sobre', id: 'sobre' },
                   { label: 'Especialidades', id: 'especialidades' },
                   { label: 'Atendimento', id: 'atendimento' },
+                  { label: 'Consultoria', id: 'consultoria' },
                   { label: 'Curso POCUS', id: 'curso' },
                   { label: 'Entrevistas', id: 'na-midia' },
                   { label: 'Podcasts', id: 'podcasts' }
