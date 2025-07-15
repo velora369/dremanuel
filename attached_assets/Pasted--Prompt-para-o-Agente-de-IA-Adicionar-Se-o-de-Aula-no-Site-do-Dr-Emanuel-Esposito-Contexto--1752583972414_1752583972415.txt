@@ -1,0 +1,39 @@
+# Prompt para o Agente de IA: Adicionar Seção de Aula no Site do Dr. Emanuel Esposito
+
+**Contexto:** Você é um agente de IA responsável por modificar o site do Dr. Emanuel Esposito (https://nefroesposito.site), um médico nefrologista especialista em transplante renal. O objetivo é enriquecer o conteúdo do site com material educacional relevante, especificamente uma aula sobre transplante renal na região Norte do Brasil.
+
+**Tarefa:** Adicione uma nova subseção de "Aulas" dentro da seção existente de "Podcasts" no site do Dr. Emanuel Esposito. Esta nova subseção deve apresentar o vídeo da aula de transplante renal fornecido, exibindo sua thumbnail e uma copy descritiva.
+
+**Diretrizes e Funcionalidades Detalhadas:**
+
+### 1. Localização da Nova Seção
+
+*   A nova subseção deve ser criada **dentro da seção "Podcasts"**. Se a seção "Podcasts" não tiver subseções atualmente, esta será a primeira. O título da nova subseção deve ser "Aulas" ou "Aulas e Palestras".
+
+### 2. Conteúdo da Aula
+
+*   **Título da Aula (Sugerido):** "Transplante Renal na Amazônia: Desafios e Avanços na Doença Renal Crônica"
+*   **Link do Vídeo:** `https://www.youtube.com/watch?v=3cmKJUY4ORk`
+*   **Exibição:** O vídeo deve ser incorporado de forma que sua **thumbnail** seja visível na página. Ao clicar na thumbnail, o vídeo deve ser reproduzido (preferencialmente em um modal ou diretamente na página, sem redirecionar para o YouTube).
+*   **Copy (Descrição da Aula):** Abaixo do título e do vídeo, adicione a seguinte descrição:
+
+    "Explore os desafios e avanços na atenção primária, acesso à diálise e, principalmente, a logística e implementação de transplantes renais na Amazônia. Esta reunião clínica semanal foca na doença renal crônica no cenário de doação e transplante na região Norte do Brasil. A discussão abrange disparidades geográficas, a importância da tutoria em novos centros de transplante, e o impacto social e econômico desses programas, incluindo a conexão com a medicina tradicional amazônica e a sustentabilidade ambiental. Apresentamos estatísticas específicas da região, os obstáculos enfrentados e as soluções inovadoras implementadas para ampliar o acesso a transplantes."
+
+### 3. Design e UI/UX
+
+*   **Consistência Visual:** A nova seção deve seguir o estilo visual existente do site do Dr. Emanuel Esposito (paleta de cores, fontes, espaçamento, etc.) para garantir uma experiência de usuário coesa.
+*   **Responsividade:** A seção deve ser totalmente responsiva, adaptando-se bem a diferentes tamanhos de tela (desktop, tablet, mobile).
+*   **Navegação:** Se necessário, atualize o menu de navegação ou adicione links internos para facilitar o acesso à nova subseção de "Aulas".
+
+### 4. Considerações Técnicas
+
+*   **Incorporação de Vídeo:** Utilize a forma mais otimizada para incorporar vídeos do YouTube que permita a exibição da thumbnail e reprodução no site (ex: `<iframe>` com parâmetros de privacidade, ou bibliotecas React/Next.js para incorporação de vídeos).
+*   **Performance:** Garanta que a adição do vídeo e da nova seção não impacte negativamente o tempo de carregamento ou a performance geral do site.
+
+**Restrições:**
+
+*   Não altere outras seções do site, a menos que seja estritamente necessário para a integração da nova subseção.
+*   Não adicione funcionalidades de backend ou banco de dados; a incorporação do vídeo é puramente frontend.
+
+**Objetivo Final:** Integrar de forma harmoniosa e funcional a aula de transplante renal no site do Dr. Emanuel Esposito, tornando-a facilmente acessível e visualmente atraente para os visitantes, reforçando a autoridade e o conteúdo educacional do médico.
+
