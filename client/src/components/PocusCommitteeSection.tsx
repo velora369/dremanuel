@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Stethoscope, Users, Award } from 'lucide-react';
+import { Stethoscope } from 'lucide-react';
 
 const PocusCommitteeSection: React.FC = () => {
   return (
@@ -22,13 +22,8 @@ const PocusCommitteeSection: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="relative">
-                <div className="w-32 h-32 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-center justify-center">
-                  <Stethoscope size={60} className="text-primary" />
-                </div>
-                <div className="absolute -top-2 -right-2 w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
-                  <Award size={20} className="text-white" />
-                </div>
+              <div className="w-32 h-32 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-center justify-center">
+                <Stethoscope size={60} className="text-primary" />
               </div>
             </motion.div>
 
