@@ -117,7 +117,8 @@ const Header: React.FC = () => {
                   { label: 'Consultoria', id: 'consultoria' },
                   { label: 'Curso POCUS', id: 'curso' },
                   { label: 'Entrevistas', id: 'na-midia' },
-                  { label: 'Podcasts', id: 'podcasts' }
+                  { label: 'Podcasts', id: 'podcasts' },
+                  { label: 'Aulas', id: 'aulas' }
                 ].map((item) => (
                   <button
                     key={item.id}

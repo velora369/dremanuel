@@ -13,6 +13,7 @@ import ConsultoriaSection from '@/components/ConsultoriaSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import MediaCoverageSection from '@/components/MediaCoverageSection';
 import PodcastsSection from '@/components/PodcastsSection';
+import LessonsSection from '@/components/LessonsSection';
 import FinalCTASection from '@/components/FinalCTASection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
@@ -39,6 +40,7 @@ const Home: React.FC = () => {
         <TestimonialsSection />
         <MediaCoverageSection />
         <PodcastsSection />
+        <LessonsSection />
         <FinalCTASection />
         <ContactSection />
       </main>
