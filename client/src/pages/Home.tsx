@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import ExperienceSection from '@/components/ExperienceSection';
+import PocusCommitteeSection from '@/components/PocusCommitteeSection';
 import SimpleStartSection from '@/components/SimpleStartSection';
 import OnlineInPersonSection from '@/components/OnlineInPersonSection';
 import CompleteCareSection from '@/components/CompleteCareSection';
@@ -29,6 +30,7 @@ const Home: React.FC = () => {
       <main>
         <HeroSection />
         <ExperienceSection />
+        <PocusCommitteeSection />
         <SimpleStartSection />
         <OnlineInPersonSection />
         <CompleteCareSection />

@@ -38,12 +38,14 @@ Preferred communication style: Simple, everyday language.
 1. **Header**: Sticky navigation with mobile menu and smooth scrolling
 2. **HeroSection**: Main landing section with call-to-action buttons
 3. **ExperienceSection**: Awards and recognition showcase
-4. **AboutDoctorSection**: Doctor profile with image carousel
-5. **SpecialtiesSection**: Medical specialties with expandable cards
-6. **CourseSection**: POCUS course promotion
-7. **ConsultoriaSection**: Specialized consultation services
-8. **TestimonialsSection**: Patient testimonials and reviews
-9. **ContactSection**: Contact information and WhatsApp integration
+4. **PocusCommitteeSection**: POCUS Committee appointment announcement
+5. **LessonsSection**: Educational video content and specialized lessons
+6. **AboutDoctorSection**: Doctor profile with image carousel
+7. **SpecialtiesSection**: Medical specialties with expandable cards
+8. **CourseSection**: POCUS course promotion
+9. **ConsultoriaSection**: Specialized consultation services
+10. **TestimonialsSection**: Patient testimonials and reviews
+11. **ContactSection**: Contact information and WhatsApp integration
 
 ### Backend Components
 1. **Server**: Express.js application with middleware setup
@@ -124,5 +126,11 @@ Preferred communication style: Simple, everyday language.
 - **Component-Based**: Modular architecture for maintainability
 - **Professional Theme**: Green color palette reflecting medical professionalism
 - **WhatsApp Integration**: Direct communication channel for patient engagement
+
+### Recent Changes (July 2025)
+- **Added LessonsSection**: Created separate educational section for specialized lessons below podcasts
+- **Added PocusCommitteeSection**: Institutional section highlighting Dr. Emanuel's appointment to Brazilian Society of Nephrology POCUS Committee
+- **Updated Navigation**: Added "Aulas" link to mobile navigation menu
+- **Enhanced Content Structure**: Improved educational content organization with dedicated sections
 
 The application successfully combines modern web technologies with healthcare-specific requirements, providing a professional platform for Dr. Emanuel Esposito's nephrology practice while maintaining excellent user experience and performance.

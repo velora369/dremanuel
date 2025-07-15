@@ -1,0 +1,44 @@
+Contexto
+Estamos atualizando a landing page do Dr. Emanuel Pinheiro Espósito. A página comunica autoridade, inovação em saúde renal e atuação estratégica no Baixo Amazonas. Precisamos adicionar uma nova seção institucional, após a atual “Reconhecimento de uma trajetória que salva vidas.”, para destacar a recente nomeação do Dr. Emanuel ao Comitê de POCUS da Sociedade Brasileira de Nefrologia.
+
+Tarefa
+Adicionar uma nova seção institucional informativa logo abaixo da seção “Reconhecimento de uma trajetória que salva vidas.”. A seção deve comunicar autoridade e reforçar o engajamento nacional do Dr. Emanuel Espósito com tecnologias aplicadas à nefrologia.
+
+Diretrizes e Funcionalidades Detalhadas
+* Idioma: Todo o conteúdo deve estar em português (PT-BR), sem termos estrangeiros.
+
+📌 Seção a ser inserida
+Título:
+Nomeação Oficial em Comitê da Sociedade Brasileira de Nefrologia
+Subtítulo (opcional):
+Avanço relevante na trajetória do Dr. Emanuel Espósito, agora membro do Comitê de POCUS – Ultrassonografia à Beira-leito em Nefrologia.
+Texto descritivo:
+A Sociedade Brasileira de Nefrologia anunciou a criação do Comitê de POCUS – Ultrassonografia à Beira-leito em Nefrologia, com o objetivo de ampliar o uso qualificado dessa tecnologia na prática clínica. O Dr. Emanuel Pinheiro Espósito foi nomeado membro oficial desse comitê, reforçando seu papel de liderança no uso de tecnologias de ponta para o cuidado renal.
+Design Visual e UI/UX:
+* Layout: Use a mesma proporção e estilo das seções anteriores (ex: “Curso Online”, “Tecnologia a serviço da saúde renal”).
+* Plano de fundo: Cor clara (ex: bg-neutral-50 ou bg-[#f7f7f7]) para suavizar a transição.
+* Tipografia:
+    * Título em text-2xl font-semibold text-[#1f3c2f]
+    * Parágrafo em text-base text-[#444] com espaçamento confortável
+* Ícone ou imagem ilustrativa:
+    * Inserir ícone 3D ou técnico relacionado à ultrassonografia médica ou nefrologia (ex: sonda, onda sonora, ícone de rim com sinal de tecnologia)
+    * Pode usar ícone Lucide, animado sutilmente (ex: fade-in ou slide-up)
+* Responsividade:
+    * Layout em coluna única no mobile
+    * Imagem/ícone à esquerda e texto à direita no desktop/tablet (grid grid-cols-2)
+
+Considerações Técnicas Específicas
+* Usar React.js com Tailwind CSS
+* Ícones: Lucide Icons, com estilo técnico/moderno
+* Nenhuma dependência de backend ou APIs externas
+* Não requer manipulação de dados
+* Compatível com a paleta de cores e estilos já utilizados na página atual
+
+Restrições
+* ❌ Não alterar nenhuma seção existente
+* ❌ Não adicionar botão de ação (CTA) nesta nova seção
+* ❌ Não inserir informações sensíveis ou links externos
+* ❌ Não aplicar linguagem informal ou promocional
+
+Objetivo Final
+Incluir uma seção institucional de destaque, que reforce a relevância científica e nacional do Dr. Emanuel Espósito, promovendo sua nomeação ao Comitê de POCUS da SBN de forma elegante, coerente com a identidade visual atual e responsiva para todos os dispositivos.
