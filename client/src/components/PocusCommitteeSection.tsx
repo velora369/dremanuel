@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const PocusCommitteeSection: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const images = [
     {
@@ -28,14 +29,35 @@ const PocusCommitteeSection: React.FC = () => {
     setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
-  // Automatic rotation every 2 seconds
+  // Automatic rotation every 4 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % images.length);
-    }, 2000);
+    }, 4000);
     
     return () => clearInterval(interval);
   }, [images.length]);
+
+  // Handle modal open/close
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  // Handle ESC key to close modal
+  useEffect(() => {
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        closeModal();
+      }
+    };
+    
+    if (isModalOpen) {
+      document.addEventListener('keydown', handleEsc);
+    }
+    
+    return () => {
+      document.removeEventListener('keydown', handleEsc);
+    };
+  }, [isModalOpen]);
 
   return (
     <section className="py-16 bg-neutral-50">
@@ -61,7 +83,8 @@ const PocusCommitteeSection: React.FC = () => {
                   <img 
                     src={images[currentImageIndex].url}
                     alt={images[currentImageIndex].alt}
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105 cursor-pointer"
+                    onClick={openModal}
                   />
                   
                   {/* Navigation Buttons */}
@@ -120,6 +143,29 @@ const PocusCommitteeSection: React.FC = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Modal for expanded image view */}
+      {isModalOpen && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4"
+          onClick={closeModal}
+        >
+          <div className="relative max-w-4xl max-h-full">
+            <img 
+              src={images[currentImageIndex].url}
+              alt={images[currentImageIndex].alt}
+              className="max-w-full max-h-full object-contain rounded-lg"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 text-white hover:text-gray-300 text-2xl bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center"
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
