@@ -6,6 +6,7 @@ import { COURSE_FEATURES, COURSE_TOPICS } from '@/lib/constants';
 const CourseSection: React.FC = () => {
   // Estado para controlar as imagens do carrossel do curso
   const [currentCourseImage, setCurrentCourseImage] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const courseImages = [
     {
       url: 'https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/04/pocus-curso-.webp',
@@ -28,7 +29,28 @@ const CourseSection: React.FC = () => {
     }, 4000);
     
     return () => clearInterval(interval);
-  }, []);
+  }, [courseImages.length]);
+
+  // Handle modal open/close
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  // Handle ESC key to close modal
+  useEffect(() => {
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        closeModal();
+      }
+    };
+    
+    if (isModalOpen) {
+      document.addEventListener('keydown', handleEsc);
+    }
+    
+    return () => {
+      document.removeEventListener('keydown', handleEsc);
+    };
+  }, [isModalOpen]);
   return (
     <section id="curso" className="py-16 bg-primary text-white">
       <div className="container mx-auto px-4">
@@ -84,7 +106,8 @@ const CourseSection: React.FC = () => {
                       <img 
                         src={image.url} 
                         alt={image.alt} 
-                        className="h-full w-full object-contain" 
+                        className="h-full w-full object-contain cursor-pointer" 
+                        onClick={openModal}
                       />
                     </motion.div>
                   ))}
@@ -152,6 +175,29 @@ const CourseSection: React.FC = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Modal for expanded image view */}
+      {isModalOpen && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4"
+          onClick={closeModal}
+        >
+          <div className="relative max-w-4xl max-h-full">
+            <img 
+              src={courseImages[currentCourseImage].url}
+              alt={courseImages[currentCourseImage].alt}
+              className="max-w-full max-h-full object-contain rounded-lg"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 text-white hover:text-gray-300 text-2xl bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center"
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
