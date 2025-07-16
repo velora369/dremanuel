@@ -3,15 +3,23 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { COURSE_FEATURES, COURSE_TOPICS } from '@/lib/constants';
 
-// Importar imagens do carrossel do curso
-import courseImage1 from '../assets/images/course/nova2cursopocus.webp';
-import courseImage2 from '../assets/images/course/cursopocus4.webp';
-import courseImage3 from '../assets/images/course/coursopocus3.webp';
-
 const CourseSection: React.FC = () => {
   // Estado para controlar as imagens do carrossel do curso
   const [currentCourseImage, setCurrentCourseImage] = useState(0);
-  const courseImages = [courseImage1, courseImage2, courseImage3];
+  const courseImages = [
+    {
+      url: 'https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/04/pocus-curso-.webp',
+      alt: 'Curso POCUS - Imagem 1'
+    },
+    {
+      url: 'https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/af0f8278-7d21-4089-90b8-6fc66064d8c3.webp',
+      alt: 'Curso POCUS - Imagem 2'
+    },
+    {
+      url: 'https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/08334087-f62f-4c05-ba38-941ef9d5ffd6.webp',
+      alt: 'Curso POCUS - Imagem 3'
+    }
+  ];
   
   // Efeito para alternar as imagens a cada 4 segundos
   useEffect(() => {
@@ -74,8 +82,8 @@ const CourseSection: React.FC = () => {
                       transition={{ duration: 0.5 }}
                     >
                       <img 
-                        src={image} 
-                        alt={`Curso POCUS aplicado à clínica médica - Imagem ${index + 1}`} 
+                        src={image.url} 
+                        alt={image.alt} 
                         className="h-full w-full object-contain" 
                       />
                     </motion.div>
