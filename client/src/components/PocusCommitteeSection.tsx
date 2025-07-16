@@ -1,8 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Stethoscope } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const PocusCommitteeSection: React.FC = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const images = [
+    {
+      url: 'https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/04/cursopocus-4.webp',
+      alt: 'Curso POCUS - Imagem 1'
+    },
+    {
+      url: 'https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/04/nova2cursopocus.webp',
+      alt: 'Curso POCUS - Imagem 2'
+    },
+    {
+      url: 'https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/04/sobreimg-2-dr.webp',
+      alt: 'Dr. Emanuel Espósito - Imagem 3'
+    }
+  ];
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
   return (
     <section className="py-16 bg-neutral-50">
       <div className="container mx-auto px-4">
@@ -14,7 +39,7 @@ const PocusCommitteeSection: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            {/* Icon/Visual Element */}
+            {/* Image Carousel */}
             <motion.div 
               className="flex justify-center lg:justify-start"
               initial={{ opacity: 0, scale: 0.8 }}
@@ -22,8 +47,44 @@ const PocusCommitteeSection: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="w-32 h-32 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-center justify-center">
-                <Stethoscope size={60} className="text-primary" />
+              <div className="relative w-full max-w-md">
+                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
+                  <img 
+                    src={images[currentImageIndex].url}
+                    alt={images[currentImageIndex].alt}
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                  
+                  {/* Navigation Buttons */}
+                  <button
+                    onClick={prevImage}
+                    className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-primary rounded-full p-2 transition-all duration-300 shadow-md"
+                  >
+                    <ChevronLeft size={20} />
+                  </button>
+                  
+                  <button
+                    onClick={nextImage}
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-primary rounded-full p-2 transition-all duration-300 shadow-md"
+                  >
+                    <ChevronRight size={20} />
+                  </button>
+                </div>
+                
+                {/* Dots Indicator */}
+                <div className="flex justify-center mt-4 space-x-2">
+                  {images.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                        index === currentImageIndex 
+                          ? 'bg-primary scale-110' 
+                          : 'bg-primary/30 hover:bg-primary/50'
+                      }`}
+                    />
+                  ))}
+                </div>
               </div>
             </motion.div>
 
