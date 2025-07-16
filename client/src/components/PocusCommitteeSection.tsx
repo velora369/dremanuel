@@ -147,19 +147,19 @@ const PocusCommitteeSection: React.FC = () => {
       {/* Modal for expanded image view */}
       {isModalOpen && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4"
+          className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4"
           onClick={closeModal}
         >
-          <div className="relative max-w-4xl max-h-full">
+          <div className="relative w-full h-full flex items-center justify-center">
             <img 
               src={images[currentImageIndex].url}
               alt={images[currentImageIndex].alt}
-              className="max-w-full max-h-full object-contain rounded-lg"
+              className="max-w-[90vw] max-h-[90vh] w-auto h-auto object-contain rounded-lg shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             />
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 text-white hover:text-gray-300 text-2xl bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center"
+              className="absolute top-4 right-4 text-white hover:text-gray-300 text-3xl bg-black bg-opacity-70 hover:bg-opacity-90 rounded-full w-12 h-12 flex items-center justify-center transition-all duration-300 z-10"
             >
               ×
             </button>
