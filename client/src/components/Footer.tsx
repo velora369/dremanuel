@@ -64,21 +64,6 @@ const Footer: React.FC = () => {
               </motion.a>
             </div>
             <p className="text-white/70 text-sm">© {new Date().getFullYear()} Dr. Emanuel Esposito. Todos os direitos reservados.</p>
-            <div className="flex flex-wrap justify-center md:justify-end gap-4 mt-3 text-white/70 text-xs">
-              <a 
-                href="#contato" 
-                onClick={(e) => {
-                  e.preventDefault();
-                  const contactElement = document.getElementById('contato');
-                  if (contactElement) {
-                    contactElement.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-                className="hover:text-white transition-colors"
-              >
-                Contato
-              </a>
-            </div>
           </div>
         </div>
       </div>
