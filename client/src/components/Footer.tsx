@@ -64,6 +64,14 @@ const Footer: React.FC = () => {
               </motion.a>
             </div>
             <p className="text-white/70 text-sm">© {new Date().getFullYear()} Dr. Emanuel Esposito. Todos os direitos reservados.</p>
+            <a 
+              href="https://medgrowthmkt.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-white/50 text-xs hover:text-white/70 transition-colors mt-1"
+            >
+              Desenvolvido por MedGrowth
+            </a>
           </div>
         </div>
       </div>
